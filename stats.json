@@ -1,0 +1,68 @@
+{
+  "assetsByChunkName": {
+    "path---examples": [
+      "path---examples-a0e39f21c11f6a62c5ab.js",
+      "path---examples-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---guides-quick-start-guide": [
+      "path---guides-quick-start-guide-b05baaf7fa738ab4192a.js",
+      "path---guides-quick-start-guide-b05baaf7fa738ab4192a.js.map"
+    ],
+    "component---src-templates-docstemplate-jsx": [
+      "component---src-templates-docstemplate-jsx-69eeef474832915520f6.js",
+      "component---src-templates-docstemplate-jsx-69eeef474832915520f6.js.map"
+    ],
+    "path---testing-manual-testing": [
+      "path---testing-manual-testing-b07e2e71656b901685df.js",
+      "path---testing-manual-testing-b07e2e71656b901685df.js.map"
+    ],
+    "path---configurations-overview": [
+      "path---configurations-overview-4a13c5d0462254c542ba.js",
+      "path---configurations-overview-4a13c5d0462254c542ba.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-examples-index-jsx": [
+      "component---src-pages-examples-index-jsx-581ae2a29761f0a8d77b.js",
+      "component---src-pages-examples-index-jsx-581ae2a29761f0a8d77b.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-81da18d2396c0f5e1d91.js",
+      "component---src-layouts-index-js-81da18d2396c0f5e1d91.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "commons": [
+      "commons-00e40f4b7de29c64429e.js",
+      "build-js-styles.css",
+      "commons-00e40f4b7de29c64429e.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404-html": [
+      "path---404-html-fdbcb011b71d7bfeb949.js",
+      "path---404-html-fdbcb011b71d7bfeb949.js.map"
+    ],
+    "component---src-pages-index-jsx": [
+      "component---src-pages-index-jsx-95eb31a71583193448cf.js",
+      "component---src-pages-index-jsx-95eb31a71583193448cf.js.map"
+    ],
+    "app": [
+      "app-9eeb4d6a6799658b26cb.js",
+      "build-js-styles.css",
+      "app-9eeb4d6a6799658b26cb.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---basics-introduction": [
+      "path---basics-introduction-f5bea1bff040de81f992.js",
+      "path---basics-introduction-f5bea1bff040de81f992.js.map"
+    ],
+    "path---404": [
+      "path---404-fdbcb011b71d7bfeb949.js",
+      "path---404-fdbcb011b71d7bfeb949.js.map"
+    ]
+  }
+}
