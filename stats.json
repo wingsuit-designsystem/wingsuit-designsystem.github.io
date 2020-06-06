@@ -5,16 +5,16 @@
       "path---examples-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---guides-quick-start-guide": [
-      "path---guides-quick-start-guide-bd236469e2ce54ac0660.js",
-      "path---guides-quick-start-guide-bd236469e2ce54ac0660.js.map"
+      "path---guides-quick-start-guide-4a3e18dcd98d6f5e1b70.js",
+      "path---guides-quick-start-guide-4a3e18dcd98d6f5e1b70.js.map"
     ],
     "component---src-templates-docstemplate-jsx": [
       "component---src-templates-docstemplate-jsx-b052b6381fb542ec59b4.js",
       "component---src-templates-docstemplate-jsx-b052b6381fb542ec59b4.js.map"
     ],
     "path---testing-manual-testing": [
-      "path---testing-manual-testing-362fa1159c6830287de3.js",
-      "path---testing-manual-testing-362fa1159c6830287de3.js.map"
+      "path---testing-manual-testing-1a62c809a3d71fabbef5.js",
+      "path---testing-manual-testing-1a62c809a3d71fabbef5.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -25,24 +25,24 @@
       "component---src-pages-examples-index-jsx-581ae2a29761f0a8d77b.js.map"
     ],
     "path---components-wingsuit": [
-      "path---components-wingsuit-d787c860b556242cd88a.js",
-      "path---components-wingsuit-d787c860b556242cd88a.js.map"
+      "path---components-wingsuit-86df94e633aa15ea8b60.js",
+      "path---components-wingsuit-86df94e633aa15ea8b60.js.map"
     ],
     "path---components-presentation": [
-      "path---components-presentation-aef41bf6cbc26ecf55f7.js",
-      "path---components-presentation-aef41bf6cbc26ecf55f7.js.map"
+      "path---components-presentation-e2c122f5440e9cecf87b.js",
+      "path---components-presentation-e2c122f5440e9cecf87b.js.map"
     ],
     "path---components-globals": [
-      "path---components-globals-357672e537e76eee5422.js",
-      "path---components-globals-357672e537e76eee5422.js.map"
+      "path---components-globals-a258d198f9d0707d8e83.js",
+      "path---components-globals-a258d198f9d0707d8e83.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-81da18d2396c0f5e1d91.js",
       "component---src-layouts-index-js-81da18d2396c0f5e1d91.js.map"
     ],
     "path---configurations-details": [
-      "path---configurations-details-4c6a610f5783c91de5de.js",
-      "path---configurations-details-4c6a610f5783c91de5de.js.map"
+      "path---configurations-details-7e728cab4e27cff22ca7.js",
+      "path---configurations-details-7e728cab4e27cff22ca7.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -55,38 +55,38 @@
       "build-js-styles.css.map"
     ],
     "path---404-html": [
-      "path---404-html-35c837dac2b103d71de9.js",
-      "path---404-html-35c837dac2b103d71de9.js.map"
+      "path---404-html-931e1965fb59a707161c.js",
+      "path---404-html-931e1965fb59a707161c.js.map"
     ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-e96fa387a22d5620a8ff.js",
       "component---src-pages-index-jsx-e96fa387a22d5620a8ff.js.map"
     ],
     "path---configurations-custom-webpack-config": [
-      "path---configurations-custom-webpack-config-01a49100aa30ec164ba9.js",
-      "path---configurations-custom-webpack-config-01a49100aa30ec164ba9.js.map"
+      "path---configurations-custom-webpack-config-dc09edaf6a65b389c1bb.js",
+      "path---configurations-custom-webpack-config-dc09edaf6a65b389c1bb.js.map"
     ],
     "app": [
-      "app-ee1fcc4c93e7094ac4d8.js",
+      "app-d9d53d8f277aa41cef31.js",
       "build-js-styles.css",
-      "app-ee1fcc4c93e7094ac4d8.js.map",
+      "app-d9d53d8f277aa41cef31.js.map",
       "build-js-styles.css.map"
     ],
     "path---components-overview": [
-      "path---components-overview-a34f7bd04c574cebeafa.js",
-      "path---components-overview-a34f7bd04c574cebeafa.js.map"
+      "path---components-overview-5c58b7c771a6d37ac6e2.js",
+      "path---components-overview-5c58b7c771a6d37ac6e2.js.map"
     ],
     "path---components-twig": [
-      "path---components-twig-8911f93766dcb0b4443e.js",
-      "path---components-twig-8911f93766dcb0b4443e.js.map"
+      "path---components-twig-cfec39e162ae769d9e00.js",
+      "path---components-twig-cfec39e162ae769d9e00.js.map"
     ],
     "path---basics-introduction": [
-      "path---basics-introduction-22524792a73826c79996.js",
-      "path---basics-introduction-22524792a73826c79996.js.map"
+      "path---basics-introduction-3a01fc52bd2fbd160a91.js",
+      "path---basics-introduction-3a01fc52bd2fbd160a91.js.map"
     ],
     "path---404": [
-      "path---404-35c837dac2b103d71de9.js",
-      "path---404-35c837dac2b103d71de9.js.map"
+      "path---404-931e1965fb59a707161c.js",
+      "path---404-931e1965fb59a707161c.js.map"
     ]
   }
 }
