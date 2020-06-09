@@ -2400,7 +2400,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"{#\\n  Card!\\n  element: String (optional): Element tag that defaults to article.\\n  image: Object:\\n  Headline_element: String: String (optional): Headline element tag that defaults to div.\\n  headline: String: The headline on the card.\\n  preheadline: String: The preheadline on the card.\\n  text: String: The text on the card.\\n  alignment: center\\n#}\\n{{ variant }}\\nXX\\n{{ variant }}\\n{# Defaults: #}\\n{% set element = element|default('div') %}\\n{% set headline__element = headline__element|default('h2') %}\\n{% if url is not empty %}\\n  {% set attributes = attributes.setAttribute('href', url) %}\\n  {% set element = 'a' %}\\n{% endif %}\\n\\n<{{ element }} {{ attributes|default(create_attribute()).addClass([\\n  alignment == 'center'?'text-center': '',\\n  variant == 'default' ? 'block',\\n  'group hover:no-underline',\\n] | sort | join(' ') | trim) }}>\\n  {#start of image div of the card#}\\n  <div class=\\\"{{ image_classes }}\\\">\\n    {% block image %}\\n      {{ image }}\\n    {% endblock %}\\n  </div>\\n  {#content-wrapper div of the card#}\\n  <div {{ attributes|default(create_attribute()).addClass([\\n  ] | sort | join(' ') | trim) }}>\\n    {#start of pre-headline div of the card#}\\n    {% if preheadline is not empty %}\\n      <div {{ attributes|default(create_attribute()).addClass([\\n        'font-serif', 'text-4xl', 'text-blue', 'group-hover:underline',\\n      ] | sort | join(' ') | trim) }}>\\n        {% block preheadline %}\\n          {{ preheadline }}\\n        {% endblock %}\\n      </div>\\n    {% endif %}\\n    {#end pre-headline of div#}\\n\\n    {#start of headline div of the card#}\\n    <{{ headline__element }} {{ attributes|default(create_attribute()).addClass([\\n      'text-base', 'mb-1', 'uppercase', 'text-gray-light', 'font-sans',\\n    ] | sort | join(' ') | trim) }}>\\n      {% block headline %}\\n        {{ headline }}\\n      {% endblock %}\\n    </{{ headline__element }}>\\n    {#end headline of div#}\\n\\n    {#start of text div of the card#}\\n    {% if text is not empty %}\\n      <div {{ attributes|default(create_attribute()).addClass([\\n        'text-base', 'mb-10', 'text-gray-dark', 'font-sans',\\n      ] | sort | join(' ') | trim) }}\\\">\\n        {% block text %}\\n          {{ text }}\\n        {% endblock %}\\n      </div>\\n    {% endif %}\\n    {#end of text div#}\\n\\n    {#start of button div of the card#}\\n    {% if button is not empty %}\\n      {% include '@atoms/button/button.twig' with {variant: 'primary', content: button} %}\\n    {% endif %}\\n    {#end of button div#}\\n\\n    {#start of icon div of the card#}\\n    {% if icon is not empty %}\\n      {% for icon in icons %}\\n        {% include \\\"@atoms/svg/_svg--icon.twig\\\" with {\\n          size: 'w-6 h-6',\\n          icon: icon\\n        } %}\\n      {% endfor %}\\n    {% endif %}\\n    {#end of icon div#}\\n  </div>\\n  {#end of content-wrapper div#}\\n</{{ element }}>\\n\");\n\n//# sourceURL=webpack:///./source/default/patterns/02-molecules/card/card.twig?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"{#\\n  Card!\\n  element: String (optional): Element tag that defaults to article.\\n  image: Object:\\n  Headline_element: String: String (optional): Headline element tag that defaults to div.\\n  headline: String: The headline on the card.\\n  preheadline: String: The preheadline on the card.\\n  text: String: The text on the card.\\n  alignment: center\\n#}\\n{# Defaults: #}\\n{% set element = element|default('div') %}\\n{% set headline__element = headline__element|default('h2') %}\\n{% if url is not empty %}\\n  {% set attributes = attributes.setAttribute('href', url) %}\\n  {% set element = 'a' %}\\n{% endif %}\\n\\n<{{ element }} {{ attributes|default(create_attribute()).addClass([\\n  alignment == 'center'?'text-center': '',\\n  variant == 'default' ? 'block',\\n  'group hover:no-underline',\\n] | sort | join(' ') | trim) }}>\\n  {#start of image div of the card#}\\n  <div class=\\\"{{ image_classes }}\\\">\\n    {% block image %}\\n      {{ image }}\\n    {% endblock %}\\n  </div>\\n  {#content-wrapper div of the card#}\\n  <div {{ attributes|default(create_attribute()).addClass([\\n  ] | sort | join(' ') | trim) }}>\\n    {#start of pre-headline div of the card#}\\n    {% if preheadline is not empty %}\\n      <div {{ attributes|default(create_attribute()).addClass([\\n        'font-serif', 'text-4xl', 'text-blue', 'group-hover:underline',\\n      ] | sort | join(' ') | trim) }}>\\n        {% block preheadline %}\\n          {{ preheadline }}\\n        {% endblock %}\\n      </div>\\n    {% endif %}\\n    {#end pre-headline of div#}\\n\\n    {#start of headline div of the card#}\\n    <{{ headline__element }} {{ attributes|default(create_attribute()).addClass([\\n      'text-base', 'mb-1', 'uppercase', 'text-gray-light', 'font-sans',\\n    ] | sort | join(' ') | trim) }}>\\n      {% block headline %}\\n        {{ headline }}\\n      {% endblock %}\\n    </{{ headline__element }}>\\n    {#end headline of div#}\\n\\n    {#start of text div of the card#}\\n    {% if text is not empty %}\\n      <div {{ attributes|default(create_attribute()).addClass([\\n        'text-base', 'mb-10', 'text-gray-dark', 'font-sans',\\n      ] | sort | join(' ') | trim) }}\\\">\\n        {% block text %}\\n          {{ text }}\\n        {% endblock %}\\n      </div>\\n    {% endif %}\\n    {#end of text div#}\\n\\n    {#start of button div of the card#}\\n    {% if button is not empty %}\\n      {% include '@atoms/button/button.twig' with {variant: 'primary', content: button} %}\\n    {% endif %}\\n    {#end of button div#}\\n\\n    {#start of icon div of the card#}\\n    {% if icon is not empty %}\\n      {% for icon in icons %}\\n        {% include \\\"@atoms/svg/_svg--icon.twig\\\" with {\\n          size: 'w-6 h-6',\\n          icon: icon\\n        } %}\\n      {% endfor %}\\n    {% endif %}\\n    {#end of icon div#}\\n  </div>\\n  {#end of content-wrapper div#}\\n</{{ element }}>\\n\");\n\n//# sourceURL=webpack:///./source/default/patterns/02-molecules/card/card.twig?");
 
 /***/ }),
 
@@ -2647,7 +2647,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Bold.ttf?0726e4dac7c7a926c6346c4356ddc30b\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Bold.ttf?0726e4dac7c7a926c6346c4356ddc30b\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf?");
 
 /***/ }),
 
@@ -2659,7 +2659,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Bold.woff?08f2305e2af62004d8a2f098161df2ed\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Bold.woff?08f2305e2af62004d8a2f098161df2ed\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff?");
 
 /***/ }),
 
@@ -2671,7 +2671,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Bold.woff2?83b0e1125f0f261ab3d5360b09953634\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff2?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Bold.woff2?83b0e1125f0f261ab3d5360b09953634\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff2?");
 
 /***/ }),
 
@@ -2695,7 +2695,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Regular.ttf?ffa7612a46f8e3a07101e610bb6a469f\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.ttf?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Regular.ttf?ffa7612a46f8e3a07101e610bb6a469f\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.ttf?");
 
 /***/ }),
 
@@ -2707,7 +2707,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Regular.woff?5354a575d9e1d082a7397ce4fa516203\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Regular.woff?5354a575d9e1d082a7397ce4fa516203\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff?");
 
 /***/ }),
 
@@ -2719,7 +2719,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-Regular.woff2?1c2889a8d334e40e309e01e244b60192\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff2?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Regular.woff2?1c2889a8d334e40e309e01e244b60192\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff2?");
 
 /***/ }),
 
@@ -2731,7 +2731,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"assets/fonts/SourceSerifPro-SemiBold.ttf?0bbc62fe512c7f502e92a22a0cf4ab5d\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-SemiBold.ttf?0bbc62fe512c7f502e92a22a0cf4ab5d\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf?");
 
 /***/ }),
 
