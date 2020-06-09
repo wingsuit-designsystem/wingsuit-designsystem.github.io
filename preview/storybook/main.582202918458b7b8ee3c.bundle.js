@@ -1954,7 +1954,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sto
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./patterns/01-atoms/image/dummy.png\": \"./source/default/patterns/01-atoms/image/dummy.png\",\n\t\"./patterns/01-atoms/svg/svg/chevron-down.svg\": \"./source/default/patterns/01-atoms/svg/svg/chevron-down.svg\",\n\t\"./patterns/01-atoms/svg/svg/close.svg\": \"./source/default/patterns/01-atoms/svg/svg/close.svg\",\n\t\"./patterns/01-atoms/svg/svg/cross.svg\": \"./source/default/patterns/01-atoms/svg/svg/cross.svg\",\n\t\"./patterns/01-atoms/svg/svg/facebook-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/facebook-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/gug_logo_typo.svg\": \"./source/default/patterns/01-atoms/svg/svg/gug_logo_typo.svg\",\n\t\"./patterns/01-atoms/svg/svg/hand.svg\": \"./source/default/patterns/01-atoms/svg/svg/hand.svg\",\n\t\"./patterns/01-atoms/svg/svg/instagram-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/instagram-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/mail-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/mail-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/search.svg\": \"./source/default/patterns/01-atoms/svg/svg/search.svg\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.svg\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.svg\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.woff\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.woff2\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff2\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.svg\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.svg\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.ttf\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.woff\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.woff2\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff2\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./source/default sync recursive \\\\.(svg|png|jpg|jpeg|gif|woff|woff2|ttf)$\";\n\n//# sourceURL=webpack:///./source/default_sync_\\.(svg%7Cpng%7Cjpg%7Cjpeg%7Cgif%7Cwoff%7Cwoff2%7Cttf)$?");
+eval("var map = {\n\t\"./patterns/01-atoms/image/dummy.png\": \"./source/default/patterns/01-atoms/image/dummy.png\",\n\t\"./patterns/01-atoms/svg/svg/chevron-down.svg\": \"./source/default/patterns/01-atoms/svg/svg/chevron-down.svg\",\n\t\"./patterns/01-atoms/svg/svg/close.svg\": \"./source/default/patterns/01-atoms/svg/svg/close.svg\",\n\t\"./patterns/01-atoms/svg/svg/cross.svg\": \"./source/default/patterns/01-atoms/svg/svg/cross.svg\",\n\t\"./patterns/01-atoms/svg/svg/facebook-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/facebook-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/gug_logo_typo.svg\": \"./source/default/patterns/01-atoms/svg/svg/gug_logo_typo.svg\",\n\t\"./patterns/01-atoms/svg/svg/hand.svg\": \"./source/default/patterns/01-atoms/svg/svg/hand.svg\",\n\t\"./patterns/01-atoms/svg/svg/instagram-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/instagram-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/mail-outline.svg\": \"./source/default/patterns/01-atoms/svg/svg/mail-outline.svg\",\n\t\"./patterns/01-atoms/svg/svg/search.svg\": \"./source/default/patterns/01-atoms/svg/svg/search.svg\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.woff\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Bold.woff2\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff2\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.ttf\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.woff\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-Regular.woff2\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.woff2\",\n\t\"./tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf\": \"./source/default/tokens/fonts/source-sans/SourceSerifPro-SemiBold.ttf\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./source/default sync recursive \\\\.(svg|png|jpg|jpeg|gif|woff|woff2|ttf)$\";\n\n//# sourceURL=webpack:///./source/default_sync_\\.(svg%7Cpng%7Cjpg%7Cjpeg%7Cgif%7Cwoff%7Cwoff2%7Cttf)$?");
 
 /***/ }),
 
@@ -2627,18 +2627,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.svg":
-/*!*************************************************************************!*\
-  !*** ./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.svg ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n      id: \"SourceSerifPro-Bold-usage\",\n      viewBox: undefined,\n      url: __webpack_require__.p + \"images/spritemap.svg#SourceSerifPro-Bold-usage\",\n      toString: function () {\n        return this.url;\n      }\n    });\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.svg?");
-
-/***/ }),
-
 /***/ "./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf":
 /*!*************************************************************************!*\
   !*** ./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.ttf ***!
@@ -2672,18 +2660,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"/fonts/SourceSerifPro-Bold.woff2?83b0e1125f0f261ab3d5360b09953634\");\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Bold.woff2?");
-
-/***/ }),
-
-/***/ "./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.svg":
-/*!****************************************************************************!*\
-  !*** ./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.svg ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n      id: \"SourceSerifPro-Regular-usage\",\n      viewBox: undefined,\n      url: __webpack_require__.p + \"images/spritemap.svg#SourceSerifPro-Regular-usage\",\n      toString: function () {\n        return this.url;\n      }\n    });\n\n//# sourceURL=webpack:///./source/default/tokens/fonts/source-sans/SourceSerifPro-Regular.svg?");
 
 /***/ }),
 
