@@ -9,8 +9,8 @@
       "path---guides-quick-start-guide-4a3e18dcd98d6f5e1b70.js.map"
     ],
     "component---src-templates-docstemplate-jsx": [
-      "component---src-templates-docstemplate-jsx-b052b6381fb542ec59b4.js",
-      "component---src-templates-docstemplate-jsx-b052b6381fb542ec59b4.js.map"
+      "component---src-templates-docstemplate-jsx-e33e73c2d588e4563925.js",
+      "component---src-templates-docstemplate-jsx-e33e73c2d588e4563925.js.map"
     ],
     "path---testing-manual-testing": [
       "path---testing-manual-testing-1a62c809a3d71fabbef5.js",
@@ -21,8 +21,8 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-pages-examples-index-jsx": [
-      "component---src-pages-examples-index-jsx-581ae2a29761f0a8d77b.js",
-      "component---src-pages-examples-index-jsx-581ae2a29761f0a8d77b.js.map"
+      "component---src-pages-examples-index-jsx-436e067c2785f2bd10be.js",
+      "component---src-pages-examples-index-jsx-436e067c2785f2bd10be.js.map"
     ],
     "path---components-wingsuit": [
       "path---components-wingsuit-86df94e633aa15ea8b60.js",
@@ -49,9 +49,9 @@
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
     "commons": [
-      "commons-00e40f4b7de29c64429e.js",
+      "commons-92683243b454a25fa51b.js",
       "build-js-styles.css",
-      "commons-00e40f4b7de29c64429e.js.map",
+      "commons-92683243b454a25fa51b.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -59,17 +59,17 @@
       "path---404-html-931e1965fb59a707161c.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-e96fa387a22d5620a8ff.js",
-      "component---src-pages-index-jsx-e96fa387a22d5620a8ff.js.map"
+      "component---src-pages-index-jsx-19dc56a890296f6fc67f.js",
+      "component---src-pages-index-jsx-19dc56a890296f6fc67f.js.map"
     ],
     "path---configurations-custom-webpack-config": [
       "path---configurations-custom-webpack-config-dc09edaf6a65b389c1bb.js",
       "path---configurations-custom-webpack-config-dc09edaf6a65b389c1bb.js.map"
     ],
     "app": [
-      "app-d9d53d8f277aa41cef31.js",
+      "app-688331f67b2bdfc0cdcd.js",
       "build-js-styles.css",
-      "app-d9d53d8f277aa41cef31.js.map",
+      "app-688331f67b2bdfc0cdcd.js.map",
       "build-js-styles.css.map"
     ],
     "path---components-overview": [
