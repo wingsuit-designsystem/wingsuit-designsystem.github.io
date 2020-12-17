@@ -1,32 +1,32 @@
 {
   "assetsByChunkName": {
     "path---assets-images": [
-      "path---assets-images-84a4d0c80f70a349e626.js",
-      "path---assets-images-84a4d0c80f70a349e626.js.map"
+      "path---assets-images-753856d81c07e3cd4b0d.js",
+      "path---assets-images-753856d81c07e3cd4b0d.js.map"
     ],
     "path---examples": [
       "path---examples-a0e39f21c11f6a62c5ab.js",
       "path---examples-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---guides-quick-start-guide": [
-      "path---guides-quick-start-guide-d6860b37c637eabcec89.js",
-      "path---guides-quick-start-guide-d6860b37c637eabcec89.js.map"
+      "path---guides-quick-start-guide-73420e7b6ed682677680.js",
+      "path---guides-quick-start-guide-73420e7b6ed682677680.js.map"
     ],
     "component---src-templates-docstemplate-jsx": [
       "component---src-templates-docstemplate-jsx-caea9c1e5f3950482bfe.js",
       "component---src-templates-docstemplate-jsx-caea9c1e5f3950482bfe.js.map"
     ],
-    "path---testing-manual-testing": [
-      "path---testing-manual-testing-65c938dbbe4b63f24f86.js",
-      "path---testing-manual-testing-65c938dbbe4b63f24f86.js.map"
+    "path---testing-visual-testing": [
+      "path---testing-visual-testing-8f827ea14bc3dd4699fb.js",
+      "path---testing-visual-testing-8f827ea14bc3dd4699fb.js.map"
     ],
     "path---guides-create-component-guide": [
-      "path---guides-create-component-guide-ed7276b366fc3e8118de.js",
-      "path---guides-create-component-guide-ed7276b366fc3e8118de.js.map"
+      "path---guides-create-component-guide-fb85335a492d717717ce.js",
+      "path---guides-create-component-guide-fb85335a492d717717ce.js.map"
     ],
     "path---drupal-ui-patterns": [
-      "path---drupal-ui-patterns-c00c03b9ed283c1fabd5.js",
-      "path---drupal-ui-patterns-c00c03b9ed283c1fabd5.js.map"
+      "path---drupal-ui-patterns-6600b8d1e9108df16632.js",
+      "path---drupal-ui-patterns-6600b8d1e9108df16632.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -37,36 +37,36 @@
       "component---src-pages-examples-index-jsx-3bb18ee5d3e5994b83e8.js.map"
     ],
     "path---components-wingsuit": [
-      "path---components-wingsuit-c3effd4ab7150b79dbc0.js",
-      "path---components-wingsuit-c3effd4ab7150b79dbc0.js.map"
+      "path---components-wingsuit-9233d29b3a1532c5f296.js",
+      "path---components-wingsuit-9233d29b3a1532c5f296.js.map"
     ],
     "path---documentation-overview": [
-      "path---documentation-overview-5c160e5c3b739b931b28.js",
-      "path---documentation-overview-5c160e5c3b739b931b28.js.map"
+      "path---documentation-overview-c627fef63c81ddb97a1b.js",
+      "path---documentation-overview-c627fef63c81ddb97a1b.js.map"
     ],
     "path---components-presentation": [
-      "path---components-presentation-67e2f633cf89cf436ff4.js",
-      "path---components-presentation-67e2f633cf89cf436ff4.js.map"
+      "path---components-presentation-c0ce3b9f7467952d906f.js",
+      "path---components-presentation-c0ce3b9f7467952d906f.js.map"
     ],
     "path---configurations-preset-webpack": [
-      "path---configurations-preset-webpack-2fef796acc2b5ce31a24.js",
-      "path---configurations-preset-webpack-2fef796acc2b5ce31a24.js.map"
+      "path---configurations-preset-webpack-62a052087b3d07295cde.js",
+      "path---configurations-preset-webpack-62a052087b3d07295cde.js.map"
     ],
     "path---components-globals": [
-      "path---components-globals-6ba00306c7b041c0da66.js",
-      "path---components-globals-6ba00306c7b041c0da66.js.map"
+      "path---components-globals-6aa0e0f6828cd1a4ccbd.js",
+      "path---components-globals-6aa0e0f6828cd1a4ccbd.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-e75a7092f14cf73f7950.js",
       "component---src-layouts-index-js-e75a7092f14cf73f7950.js.map"
     ],
     "path---configurations-details": [
-      "path---configurations-details-f513a577ab1968825f87.js",
-      "path---configurations-details-f513a577ab1968825f87.js.map"
+      "path---configurations-details-8935d56b44dd5b780c9e.js",
+      "path---configurations-details-8935d56b44dd5b780c9e.js.map"
     ],
     "path---documentation-mdx": [
-      "path---documentation-mdx-391b6160ab00a1b4f2cc.js",
-      "path---documentation-mdx-391b6160ab00a1b4f2cc.js.map"
+      "path---documentation-mdx-2adef9e60172d9987876.js",
+      "path---documentation-mdx-2adef9e60172d9987876.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -79,54 +79,54 @@
       "build-js-styles.css.map"
     ],
     "path---assets-svg": [
-      "path---assets-svg-49865f167a3323abc063.js",
-      "path---assets-svg-49865f167a3323abc063.js.map"
+      "path---assets-svg-e36658f51d46768c6dc2.js",
+      "path---assets-svg-e36658f51d46768c6dc2.js.map"
     ],
     "path---404-html": [
-      "path---404-html-5098a3b8353371a04dd8.js",
-      "path---404-html-5098a3b8353371a04dd8.js.map"
+      "path---404-html-0e0118f667e3528e96b2.js",
+      "path---404-html-0e0118f667e3528e96b2.js.map"
     ],
     "path---assets-javascript": [
-      "path---assets-javascript-06aa9147e90544c02e4c.js",
-      "path---assets-javascript-06aa9147e90544c02e4c.js.map"
+      "path---assets-javascript-5b7436a91d1b47d71d50.js",
+      "path---assets-javascript-5b7436a91d1b47d71d50.js.map"
     ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-3ccd2dd153c907d5268f.js",
       "component---src-pages-index-jsx-3ccd2dd153c907d5268f.js.map"
     ],
     "path---configurations-custom-webpack-config": [
-      "path---configurations-custom-webpack-config-a0f19e1ce3d4726f2cb9.js",
-      "path---configurations-custom-webpack-config-a0f19e1ce3d4726f2cb9.js.map"
+      "path---configurations-custom-webpack-config-0331bf1f25e9c772c20f.js",
+      "path---configurations-custom-webpack-config-0331bf1f25e9c772c20f.js.map"
     ],
     "path---assets-overview": [
-      "path---assets-overview-e12f7f066b20c93acab7.js",
-      "path---assets-overview-e12f7f066b20c93acab7.js.map"
+      "path---assets-overview-ecb4759229c41ee850ba.js",
+      "path---assets-overview-ecb4759229c41ee850ba.js.map"
     ],
     "app": [
-      "app-37682ab6a58765fbeddc.js",
+      "app-af1fe1c31ecea8a4b3d2.js",
       "build-js-styles.css",
-      "app-37682ab6a58765fbeddc.js.map",
+      "app-af1fe1c31ecea8a4b3d2.js.map",
       "build-js-styles.css.map"
     ],
     "path---components-overview": [
-      "path---components-overview-3a9705eeed51bcde3f38.js",
-      "path---components-overview-3a9705eeed51bcde3f38.js.map"
+      "path---components-overview-442371452bfe3cf0446a.js",
+      "path---components-overview-442371452bfe3cf0446a.js.map"
     ],
     "path---components-twig": [
-      "path---components-twig-e8924783f599b6d90ad8.js",
-      "path---components-twig-e8924783f599b6d90ad8.js.map"
+      "path---components-twig-5d7fd80b3ad11ce50ac1.js",
+      "path---components-twig-5d7fd80b3ad11ce50ac1.js.map"
     ],
     "path---basics-introduction": [
-      "path---basics-introduction-27238a948a2eb7e245ae.js",
-      "path---basics-introduction-27238a948a2eb7e245ae.js.map"
+      "path---basics-introduction-8716fcf303c76f07e70d.js",
+      "path---basics-introduction-8716fcf303c76f07e70d.js.map"
     ],
     "path---404": [
-      "path---404-5098a3b8353371a04dd8.js",
-      "path---404-5098a3b8353371a04dd8.js.map"
+      "path---404-0e0118f667e3528e96b2.js",
+      "path---404-0e0118f667e3528e96b2.js.map"
     ],
     "path---drupal-overview": [
-      "path---drupal-overview-d9d6dd74157084a33331.js",
-      "path---drupal-overview-d9d6dd74157084a33331.js.map"
+      "path---drupal-overview-871fe6c826ff4e5d1f01.js",
+      "path---drupal-overview-871fe6c826ff4e5d1f01.js.map"
     ]
   }
 }
