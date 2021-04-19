@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title></title>
+        <link rel="stylesheet" href="/pages.css">
+      </head>
+  <body x-data="{ isScrollDown: false, menuIsOpen: false }">
+    <div class="wingsuit-page-wrapper">
+  
+
+<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+    <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
+      <div class="flex items-center">
+        
+<a class="pr-2 block" href="<front>">
+  <img src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
+</a>
+        <span class="text-xs text-gray-300">v1.0</span>
+      </div>
+    </div>
+          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+        <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
+      </div>
+        <div class="hidden lg:block">
+      <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
+           style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor" class="octo-arm" style="transform-origin: 130px 106px;"></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor" class="octo-body"></path>
+      </svg>
+    </div>
+
+      </div>
+</header>
+
+
+
+<main class="main-content flex-1 mt-10">
+            
+  
+
+
+
+
+
+  <div  class="max-w-5xl mx-auto pb-10 md:pb-20 pt-10 md:pt-20 px-6">
+                  
+
+
+  <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
+                                    
+      <div class="">
+                      <div class="w-full flex-grow text-black z-20 mt-2 bg-white h-full overflow-y-scroll visible-height lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center lg:text-left">
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          BASICS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          GUIDES
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/quick-start-guide">Quickstart guide</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-component-guide">Create new component</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          CONFIGURATIONS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/configurations/details">Configuration</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/configurations/custom-webpack-config">Custom webpack configuration</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/configurations/preset-webpack">Presets</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          COMPONENTS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/components/overview">Overview</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/components/globals">Global variables</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/components/wingsuit">Wingsuit (UI Patterns)</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/components/presentation">Presentation</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          ASSETS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/assets/overview">Overview</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/assets/images">Images & Icons</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/assets/svg">SVGs</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/assets/javascript">Javascript</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          DRUPAL
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/drupal/ui_patterns">Wingsuit Kickstarter (with UI Patterns and Layout Builder)</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          DOCUMENTATION
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/documentation/overview">Get started</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/documentation/mdx">MDX</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <div class="p-2 my-2.5 uppercase font-bold">
+          TESTING
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/testing/visual-testing">Visual Testing</a>
+              </li>
+                      </ul>
+              </li>
+      </ul>
+</div>
+
+
+        
+      </div>
+                              
+      <div class="">
+                          
+<div class="prose dark:prose-dark lg:prose-lg max-w-none">
+      <h1>Wingsuit Kickstarter (with UI Patterns and Layout Builder)</h1><p><a href="https://github.com/wingsuit-designsystem/wingsuit_kickstarter">Wingsuit Kickstarter</a> is the fastest way to start with Wingsuit.</p><p>The Kickstarter uses <a href="https://github.com/acquia/lightning">Acquia Lightning</a> as distribution and <a href="https://github.com/acquia/blt">Acquia Blt</a> for automation.</p><ul><li><h4>Drupal blocks with a pattern.</h4><img src="/images/add-blocks.png"/></li><li><h4>Sections are also patterns</h4><img src="/images/add-sections.png"/></li><li><h4>Block Manage display with layout builder. Configure the pattern and assign fields.</h4><img src="/images/configure-patterns.png"/></li></ul><h2>Prerequisites</h2><ul><li><a href="https://nodejs.org">Node <code>^12</code></a></li><li><a href="https://classic.yarnpkg.com/">YARN <code>^1.22</code></a></li><li><a href="https://php.net">PHP <code>^7.0.0</code></a></li></ul><h2>Installation</h2><pre><code class="hljs language-sh">composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction</code></pre><pre><code class="hljs language-sh"><span class="hljs-built_in">cd</span> wingsuit-kickstarter &amp;&amp; ./vendor/bin/blt setup</code></pre><h3>First steps</h3><p>Open the page and login with:</p><p>Username: admin<br/>
+Password: admin</p><p>After login go to the front page and open the Layout Builder to add more blocks. Each block is mapped to a pattern (mostly molecules). Each section is a pattern.
+Click on <code>configure</code> in a section to see all settings you will find in storybook.</p><h2>Development</h2><p>The Kickstarter installs Wingsuit under <code>docroot/themes/custom</code> and generates all templates with <code>yarn build:drupal</code> to
+<code>docroot/themes/custom/wingsuit/dist/app-drupal</code> (check <code>blt/blt.yml</code> to see build process).</p><p>You can run webpack in watch mode with <code>yarn dev:drupal</code> (if your changes don&#x27;t appear you probably forget to start <code>yarn dev:drupal</code>).</p><p>The theme takes css js and patterns from the dist folder and not from <code>source</code> folder.</p><p>You can configure the path of your dist folder. See <a href="../../configurations/details/index.md">Configuration details</a> to configure the webpack part. Open &quot;Wingsuit settings&quot; under Configuration in Drupal and adjust the path to the dist folder.</p><h3>Storybook</h3><p>To develop your patterns start storybook <code>yarn dev:storybook</code>.</p><h2>Module overview:</h2><p>Following modules are used to map Wingsuit patterns to Drupal:</p><ul><li><a href="https://www.drupal.org/project/components">components</a>: Registers folders of components defined by your theme or module as Twig namespaces.</li><li><a href="https://www.drupal.org/project/ui_patterns">ui_patterns</a>: Does the mapping magic.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_builder">ui_patterns_layout_builder</a>: To use UI Patterns with Layout Builder.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_settings">ui_patterns_settings</a>: Make patterns configurable.</li><li><a href="https://www.drupal.org/project/wingsuit_companion">wingsuit_companion</a>. Locate templates inside the wingsuit <code>dist</code> folder.</li></ul><div class="next-title">FEEDBACK</div><div class="next"><div class="next__content"><b>Open an issue</b><br/> if you miss something or something is not working. </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/issues">Issue</a></div><div class="next"><div class="next__content"><b>Open an Pull Request</b><br/> I am happy about new ideas! </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/pulls">Pull Request</a></div><div class="next"><div class="next__content"><b>Join on Slack</b><br/> </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://drupaltwig.slack.com/archives/C01C82BH864">Slack</a></div><div class="next"><div class="next__content"><b>Github star</b><br/> If you like it let me know. It </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/">Motivates me!</a></div>
+  </div>
+
+  
+        
+      </div>
+      </div>
+
+    </div>
+
+      </main>
+
+  <footer class="text-gray-700 body-font">
+  <div class="bg-yellow">
+          
+
+
+
+
+  <div  class="max-w-5xl mx-auto px-6">
+              <div class="mt-2 pt-24 pb-10 text-3xl font-bold text-black">Documentation</div>
+          <div class="block lg:flex pb-24">
+              <nav role="navigation" class="w-full">
+  <ul class="list-reset block lg:flex flex-row justify-between flex-1 ">
+          <li class="">
+        <a class="px-2 my-4 uppercase font-bold hover:underline" href="#">
+          BASICS
+        </a>
+                  <ul class="list-reset lg:flex flex-col flex-1 mb-7">
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Introduction</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <a class="px-2 my-4 uppercase font-bold hover:underline" href="#">
+          CONFIGURATIONS
+        </a>
+                  <ul class="list-reset lg:flex flex-col flex-1 mb-7">
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Configuration</a>
+              </li>
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Custom webpack configuration</a>
+              </li>
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Presets</a>
+              </li>
+                      </ul>
+              </li>
+          <li class="">
+        <a class="px-2 my-4 uppercase font-bold hover:underline" href="#">
+          CONFIGURATIONS
+        </a>
+                  <ul class="list-reset lg:flex flex-col flex-1 mb-7">
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Configuration</a>
+              </li>
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Custom webpack configuration</a>
+              </li>
+                          <li class="mt-4">
+                <a class="p-2 text-gray-600 hover:text-gray-900 hover:underline " href="#">Presets</a>
+              </li>
+                      </ul>
+              </li>
+      </ul>
+</nav>
+
+
+
+          </div>
+          </div>
+      </div>
+  <div class="bg-black py-6 flex items-center">
+    
+
+
+
+
+  <div  class="max-w-5xl mx-auto px-6">
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            
+
+<svg  class="fill-current svg w-5 h-5">
+    <use xlink:href="/images/spritemap.svg#facebook"></use>
+</svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            
+
+<svg  class="fill-current svg w-5 h-5">
+    <use xlink:href="/images/spritemap.svg#instagram"></use>
+</svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            
+
+<svg  class="fill-current svg w-5 h-5">
+    <use xlink:href="/images/spritemap.svg#twitter"></use>
+</svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            
+
+<svg  class="fill-current svg w-5 h-5">
+    <use xlink:href="/images/spritemap.svg#linkedin"></use>
+</svg>
+          </a>
+        </span>
+        </div>
+  </div>
+</footer>
+</div>
+                <script type="text/javascript" src="/assets.js"></script>
+                      </body>
+</html>
