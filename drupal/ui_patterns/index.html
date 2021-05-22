@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,14 +180,17 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
-      <h1>Wingsuit Kickstarter (with UI Patterns and Layout Builder)</h1><p><a href="https://github.com/wingsuit-designsystem/wingsuit_kickstarter">Wingsuit Kickstarter</a> is the fastest way to start with Wingsuit.</p><p>The Kickstarter uses <a href="https://github.com/acquia/lightning">Acquia Lightning</a> as distribution and <a href="https://github.com/acquia/blt">Acquia Blt</a> for automation.</p><ul><li><h4>Drupal blocks with a pattern.</h4><img src="/images/add-blocks.png"/></li><li><h4>Sections are also patterns</h4><img src="/images/add-sections.png"/></li><li><h4>Block Manage display with layout builder. Configure the pattern and assign fields.</h4><img src="/images/configure-patterns.png"/></li></ul><h2>Prerequisites</h2><ul><li><a href="https://nodejs.org">Node <code>^12</code></a></li><li><a href="https://classic.yarnpkg.com/">YARN <code>^1.22</code></a></li><li><a href="https://php.net">PHP <code>^7.0.0</code></a></li></ul><h2>Installation</h2><pre><code class="hljs language-sh">composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction</code></pre><pre><code class="hljs language-sh"><span class="hljs-built_in">cd</span> wingsuit-kickstarter &amp;&amp; ./vendor/bin/blt setup</code></pre><h3>First steps</h3><p>Open the page and login with:</p><p>Username: admin<br/>
-Password: admin</p><p>After login go to the front page and open the Layout Builder to add more blocks. Each block is mapped to a pattern (mostly molecules). Each section is a pattern.
-Click on <code>configure</code> in a section to see all settings you will find in storybook.</p><h2>Development</h2><p>The Kickstarter installs Wingsuit under <code>docroot/themes/custom</code> and generates all templates with <code>yarn build:drupal</code> to
-<code>docroot/themes/custom/wingsuit/dist/app-drupal</code> (check <code>blt/blt.yml</code> to see build process).</p><p>You can run webpack in watch mode with <code>yarn dev:drupal</code> (if your changes don&#x27;t appear you probably forget to start <code>yarn dev:drupal</code>).</p><p>The theme takes css js and patterns from the dist folder and not from <code>source</code> folder.</p><p>You can configure the path of your dist folder. See <a href="../../configurations/details/index.md">Configuration details</a> to configure the webpack part. Open &quot;Wingsuit settings&quot; under Configuration in Drupal and adjust the path to the dist folder.</p><h3>Storybook</h3><p>To develop your patterns start storybook <code>yarn dev:storybook</code>.</p><h2>Module overview:</h2><p>Following modules are used to map Wingsuit patterns to Drupal:</p><ul><li><a href="https://www.drupal.org/project/components">components</a>: Registers folders of components defined by your theme or module as Twig namespaces.</li><li><a href="https://www.drupal.org/project/ui_patterns">ui_patterns</a>: Does the mapping magic.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_builder">ui_patterns_layout_builder</a>: To use UI Patterns with Layout Builder.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_settings">ui_patterns_settings</a>: Make patterns configurable.</li><li><a href="https://www.drupal.org/project/wingsuit_companion">wingsuit_companion</a>. Locate templates inside the wingsuit <code>dist</code> folder.</li></ul><div class="next-title">FEEDBACK</div><div class="next"><div class="next__content"><b>Open an issue</b><br/> if you miss something or something is not working. </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/issues">Issue</a></div><div class="next"><div class="next__content"><b>Open an Pull Request</b><br/> I am happy about new ideas! </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/pulls">Pull Request</a></div><div class="next"><div class="next__content"><b>Join on Slack</b><br/> </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://drupaltwig.slack.com/archives/C01C82BH864">Slack</a></div><div class="next"><div class="next__content"><b>Github star</b><br/> If you like it let me know. It </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/">Motivates me!</a></div>
+                            <div
+ class="prose lg:prose-lg"
+>
+      <h1>Wingsuit Kickstarter (with UI Patterns and Layout Builder)</h1><p><a href="https://github.com/wingsuit-designsystem/wingsuit_kickstarter">Wingsuit Kickstarter</a> is the fastest way to start with Wingsuit.</p><p>The Kickstarter uses <a href="https://github.com/acquia/lightning">Acquia Lightning</a> as the base distribution and <a href="https://github.com/acquia/blt">Acquia Blt</a> for automation.</p><ul><li><h4>Drupal blocks with a pattern.</h4><img src="/images/add-blocks.png"/></li><li><h4>Sections are also patterns</h4><img src="/images/add-sections.png"/></li><li><h4>Block Manage display with layout builder. Configure the pattern and assign fields.</h4><img src="/images/configure-patterns.png"/></li></ul><h2>Prerequisites</h2><ul><li><a href="https://nodejs.org">Node <code>^12</code></a></li><li><a href="https://classic.yarnpkg.com/">YARN <code>^1.22</code></a></li><li><a href="https://php.net">PHP <code>^7.0.0</code></a></li></ul><h2>Installation</h2><div class="remark-highlight"><pre class="language-sh"><code class="language-sh">composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction</code></pre></div><div class="remark-highlight"><pre class="language-sh"><code class="language-sh">cd wingsuit-kickstarter &amp;amp;&amp;amp; ./vendor/bin/blt setup</code></pre></div><h3>First steps</h3><p>Open the page and login with:</p><p>Username: admin<br/>
+Password: admin</p><p>After login, edit the front page and open the layout builder to add more blocks. Each block is mapped to a pattern (mostly molecules), each section is also a pattern.
+Click on <code>configure</code> in a section to see all settings you find in storybook.</p><h2>Development</h2><p>The kickstarter installs Wingsuit under <code>docroot/themes/custom</code> and generates all templates with <code>yarn build:drupal</code> to
+<code>docroot/themes/custom/wingsuit/dist/app-drupal</code> (check <code>blt/blt.yml</code> to see the build process).</p><p>You can run webpack in watch mode with <code>yarn dev:drupal</code>. (If your changes don&#x27;t appear, you probably forgot to start <code>yarn dev:drupal</code>).</p><p>The theme loads css, js and patterns from the <code>dist</code> folder, not from <code>source</code> folder.</p><p>You can configure the path of your dist folder. See <a href="../../configurations/details/index.md">Configuration details</a> to configure the webpack part. Open &quot;Wingsuit settings&quot; under Configuration in Drupal and adjust the path to the dist folder.</p><h3>Storybook</h3><p>To edit your patterns, start storybook: <code>yarn dev:storybook</code>.</p><h2>Module overview</h2><p>The following modules are used to make Wingsuit patterns available to Drupal:</p><ul><li><a href="https://www.drupal.org/project/components">components</a>: Registers folders of components defined by your theme or module as Twig namespaces.</li><li><a href="https://www.drupal.org/project/ui_patterns">ui_patterns</a>: Does the mapping magic.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_builder">ui_patterns_layout_builder</a>: To use UI Patterns with Layout Builder.</li><li><a href="https://www.drupal.org/project/ui_patterns_layout_settings">ui_patterns_settings</a>: Make patterns configurable.</li><li><a href="https://www.drupal.org/project/wingsuit_companion">wingsuit_companion</a>. Locate templates inside the wingsuit <code>dist</code> folder.</li></ul><div class="next-title">FEEDBACK</div><div class="next"><div class="next__content"><b>Open an issue</b><br/> if you miss something or something is not working. </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/issues">Issue</a></div><div class="next"><div class="next__content"><b>Open an Pull Request</b><br/> I am happy about new ideas! </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/pulls">Pull Request</a></div><div class="next"><div class="next__content"><b>Join on Slack</b><br/> </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://drupaltwig.slack.com/archives/C01C82BH864">Slack</a></div><div class="next"><div class="next__content"><b>Github star</b><br/> If you like it let me know. It </div><a class="next__button mb-2 btn btn-lg bg-green-500 mr-2 font-weight-bold" target="_blank" href="https://github.com/wingsuit-designsystem/wingsuit/">Motivates me!</a></div>
   </div>
 
+
+  
   
         
       </div>
@@ -204,7 +210,7 @@ Click on <code>configure</code> in a section to see all settings you will find i
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -220,6 +226,7 @@ Click on <code>configure</code> in a section to see all settings you will find i
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">

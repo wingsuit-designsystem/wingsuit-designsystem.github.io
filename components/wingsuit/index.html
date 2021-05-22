@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,85 +180,129 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
-      <h1>Wingsuit (UI Patterns)</h1><p>The wingsuit pattern is defined inside a <code>pattern.wingsuit.yml</code>.</p><b>A Wingsuit component contains:</b>* index.js * pattern.stories.jsx * pattern.wingsuit.yml * css file (optional) * javascript file. (optional)<p>Expose the reference to the <code>wingsuit.yml</code> file inside the <code>pattern.stories.jsx</code> file.</p><pre><code class="hljs language-js"><span class="hljs-keyword">const</span> patternDefinition = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./pattern.wingsuit.yml&#x27;</span>);
+                            <div
+ class="prose lg:prose-lg"
+>
+      <h1>Wingsuit (UI Patterns)</h1><p>A wingsuit pattern is defined inside a <code>pattern.wingsuit.yml</code>.</p><b>A Wingsuit component contains:</b><ul><li>index.js</li><li>pattern.stories.jsx</li><li>pattern.wingsuit.yml</li><li>css file (optional)</li><li>javascript file. (optional)</li></ul><p>Expose the reference to the <code>wingsuit.yml</code> file inside the <code>pattern.stories.jsx</code> file.</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> patternDefinition <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./pattern.wingsuit.yml&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> wingsuit = {
-  patternDefinition,
-};
-</code></pre><h3>The pattern.wingsuit.yml</h3><p>The <code>pattern.wingsuit.yml</code> is a extended version of the UI Patterns yaml. Check out the <a href="https://ui-patterns.readthedocs.io/en/8.x-1.x/content/patterns-definition.html">UI Patterns documentation</a> with additions of <a href="https://www.drupal.org/project/ui_patterns_settings">UI Patterns Settings</a></p><p>A typical pattern definition file looks like this:</p><pre><code class="hljs language-yaml"><span class="hljs-attr">card:</span>
-  <span class="hljs-attr">use:</span> <span class="hljs-string">&quot;@molecules/card/card.twig&quot;</span>
-  <span class="hljs-attr">label:</span> <span class="hljs-string">Card</span>
-  <span class="hljs-attr">description:</span> <span class="hljs-string">Amazing</span> <span class="hljs-string">Cards</span>
-  <span class="hljs-attr">fields:</span>
-    <span class="hljs-attr">headline:</span>
-      <span class="hljs-attr">type:</span> <span class="hljs-string">text</span>
-      <span class="hljs-attr">label:</span> <span class="hljs-string">Headline</span>
-      <span class="hljs-attr">preview:</span>
-        <span class="hljs-attr">faker:</span> <span class="hljs-string">lorem.word</span>
-    <span class="hljs-attr">image:</span>
-      <span class="hljs-attr">type:</span> <span class="hljs-string">pattern</span>
-      <span class="hljs-attr">preview:</span>
-        <span class="hljs-attr">id:</span> <span class="hljs-string">image</span>
-        <span class="hljs-attr">variant:</span> <span class="hljs-string">primary</span>
-  <span class="hljs-attr">variants:</span>
-    <span class="hljs-attr">default:</span>
-      <span class="hljs-attr">label:</span> <span class="hljs-string">Default</span>
-    <span class="hljs-attr">horizontal:</span>
-      <span class="hljs-attr">label:</span> <span class="hljs-string">Horizontal</span>
-  <span class="hljs-attr">settings:</span>
-    <span class="hljs-attr">headline_color:</span>
-      <span class="hljs-attr">type:</span> <span class="hljs-string">select</span>
-      <span class="hljs-attr">label:</span> <span class="hljs-string">Headline</span> <span class="hljs-string">color</span>
-      <span class="hljs-attr">required:</span> <span class="hljs-literal">false</span>
-      <span class="hljs-attr">options:</span>
-        <span class="hljs-attr">blue:</span> <span class="hljs-string">Blue</span>
-        <span class="hljs-attr">black:</span> <span class="hljs-string">Black</span></code></pre><ul><li>Each <code>variant</code> is a storybook story.</li><li>Each <code>field</code> is editable with knobs and passed to the Twig template.</li><li>Each <code>setting</code> is editable with knobs and passed to the Twig template.</li></ul><h2>The extensions</h2><p>To build better preview functionality Wingsuit adds additional YAML configuration. This extensions are <em>not</em> compatible with UI Patterns Library.</p><h3>Faker</h3><p>The <code>faker</code> key generates automatic preview data with <a href="https://github.com/marak/Faker.js/">faker.js</a>.
-The value can be a string or a subobject.</p><ul><li>The string is passed to Faker.fake in &#x27;{{ }}&#x27; brackets.</li><li>To pass a complete Faker sentences use:</li></ul><pre><code class="hljs language-yaml">    <span class="hljs-attr">preview:</span>
-      <span class="hljs-attr">faker:</span>
-        <span class="hljs-attr">token:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ name.lastName }}</span> <span class="hljs-template-variable">{{ name.firstName }}</span></span></code></pre><h3>Type: pattern</h3><p>With field type <code>pattern</code> you can render patterns inside the pattern:</p><pre><code class="hljs language-yaml"><span class="hljs-attr">fields:</span>
-  <span class="hljs-attr">image:</span>
-    <span class="hljs-attr">type:</span> <span class="hljs-string">pattern</span>
-    <span class="hljs-attr">preview:</span>
-      <span class="hljs-attr">id:</span> <span class="hljs-string">image</span>
-      <span class="hljs-attr">variant:</span> <span class="hljs-string">primary</span>
-      <span class="hljs-attr">settings:</span>
-        <span class="hljs-attr">style:</span> <span class="hljs-string">medium</span>
-      <span class="hljs-attr">fields:</span>
-        <span class="hljs-attr">field:</span> <span class="hljs-string">value</span></code></pre><ul><li><code>id</code> The id of the pattern.</li><li><code>variant</code> The variant of the pattern.</li><li><code>fields</code> Overwrites fields preview values of the pattern.</li><li><code>settings</code> Overwrites setting preview values of the pattern.</li></ul><h3>Pattern list</h3><p>This works also with a list of patterns.</p><pre><code class="hljs language-yaml"><span class="hljs-attr">fields:</span>
-  <span class="hljs-attr">images:</span>
-    <span class="hljs-attr">type:</span> <span class="hljs-string">pattern</span>
-    <span class="hljs-attr">multi_value_type:</span> <span class="hljs-string">single_value</span>
-    <span class="hljs-attr">preview:</span>
-      <span class="hljs-bullet">-</span>
-        <span class="hljs-attr">id:</span> <span class="hljs-string">image</span>
-        <span class="hljs-attr">variant:</span> <span class="hljs-string">primary</span>
-        <span class="hljs-attr">settings:</span>
-          <span class="hljs-attr">style:</span> <span class="hljs-string">medium</span>
-        <span class="hljs-attr">fields:</span>
-          <span class="hljs-attr">field:</span> <span class="hljs-string">value</span>
-      <span class="hljs-bullet">-</span>
-        <span class="hljs-attr">id:</span> <span class="hljs-string">image</span>
-        <span class="hljs-attr">variant:</span> <span class="hljs-string">primary</span>
-        <span class="hljs-attr">settings:</span>
-          <span class="hljs-attr">style:</span> <span class="hljs-string">medium</span>
-        <span class="hljs-attr">fields:</span>
-          <span class="hljs-attr">field:</span> <span class="hljs-string">value</span></code></pre><p>You can control how Wingsuit will handle the resulting array of objects.</p><h4>Following options are available:</h4><ul><li><code>single_value</code>: All patterns will rendered into a single value. The resulting variable is a string not a array. This useful if you to add multiple objects into one area.<br/>Your pattern.twig looks like:</li></ul><pre><code class="hljs language-twig"><span class="hljs-template-variable">{{ images }}</span></code></pre><ul><li><code>items</code> provides a list of patterns. The resulting variable is an array you can loop through.<h4>Your pattern.twig looks like:</h4></li></ul><pre><code class="hljs language-twig"><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in images %}</span><span class="xml">
-</span><span class="hljs-template-variable">{{ item }}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span></code></pre><ul><li><code>field_items</code> provides a list of objects. The rendered pattern is inside the content key. This is useful to emulate multi value field templates in drupal.</li></ul><pre><code class="hljs language-twig"><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in images %}</span><span class="xml">
-</span><span class="hljs-template-variable">{{ item.content }}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span></code></pre><h3>Type object</h3><pre><code class="hljs language-yaml"><span class="hljs-attr">fields:</span>
-  <span class="hljs-attr">items:</span>
-    <span class="hljs-attr">type:</span> <span class="hljs-string">object</span>
-    <span class="hljs-attr">preview:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-attr">title:</span> <span class="hljs-string">Datenschutz</span>
-        <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;#&quot;</span>
-        <span class="hljs-attr">in_active_trail:</span> <span class="hljs-literal">true</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-attr">title:</span> <span class="hljs-string">Impressum</span>
-        <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;#&quot;</span></code></pre><p>With field type <code>object</code> you can pass any objects to the Twig template. This is useful for the menu, for example. You can edit the JSON string with knobs.</p><h3>Visibility</h3><p>With the visibility property you can control in which app a pattern should be visible. If the property is not set, the pattern is visible in every app.</p><pre><code class="hljs language-yaml"><span class="hljs-attr">visibility:</span> <span class="hljs-string">storybook</span> <span class="hljs-string">|</span> <span class="hljs-string">drupal</span> <span class="hljs-string">|</span> <span class="hljs-string">none</span></code></pre>
+<span class="token keyword module">export</span> <span class="token keyword">const</span> wingsuit <span class="token operator">=</span> <span class="token punctuation">{</span>
+  patternDefinition<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3>The pattern.wingsuit.yml</h3><p>The <code>pattern.wingsuit.yml</code> is a extended version of the UI Patterns yaml. Check out the <a href="https://ui-patterns.readthedocs.io/en/8.x-1.x/content/patterns-definition.html">UI Patterns documentation</a>, with additions of <a href="https://www.drupal.org/project/ui_patterns_settings">UI Patterns Settings</a>.</p><p>A typical pattern definition file looks like this:</p><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">card</span><span class="token punctuation">:</span>
+  <span class="token key atrule">use</span><span class="token punctuation">:</span> <span class="token string">&quot;@molecules/card/card.twig&quot;</span>
+  <span class="token key atrule">label</span><span class="token punctuation">:</span> Card
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> Amazing Cards
+  <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+    <span class="token key atrule">headline</span><span class="token punctuation">:</span>
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> text
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> Headline
+      <span class="token key atrule">preview</span><span class="token punctuation">:</span>
+        <span class="token key atrule">faker</span><span class="token punctuation">:</span> lorem.word
+    <span class="token key atrule">image</span><span class="token punctuation">:</span>
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> pattern
+      <span class="token key atrule">preview</span><span class="token punctuation">:</span>
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> image
+        <span class="token key atrule">variant</span><span class="token punctuation">:</span> primary
+  <span class="token key atrule">variants</span><span class="token punctuation">:</span>
+    <span class="token key atrule">default</span><span class="token punctuation">:</span>
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> Default
+    <span class="token key atrule">horizontal</span><span class="token punctuation">:</span>
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> Horizontal
+  <span class="token key atrule">settings</span><span class="token punctuation">:</span>
+    <span class="token key atrule">headline_color</span><span class="token punctuation">:</span>
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> select
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> Headline color
+      <span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+      <span class="token key atrule">options</span><span class="token punctuation">:</span>
+        <span class="token key atrule">blue</span><span class="token punctuation">:</span> Blue
+        <span class="token key atrule">black</span><span class="token punctuation">:</span> Black
+</code></pre></div><ul><li>Each <code>variant</code> is a storybook story.</li><li>Each <code>field</code> is editable with knobs and passed to the Twig template.</li><li>Each <code>setting</code> is editable with knobs and passed to the Twig template.</li></ul><h2>The extensions</h2><p>To build better preview functionality, Wingsuit adds additional YAML configuration. These extensions are <em>not</em> compatible with UI Patterns Library.</p><h3>Faker</h3><p>The <code>faker</code> key generates automatic preview data with <a href="https://github.com/marak/Faker.js/">faker.js</a>.
+The value can be a string or a subobject.</p><ul><li>The string is passed to Faker.fake in &#x27;{{ }}&#x27; brackets.</li><li>To pass a complete Faker sentence use:</li></ul><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">preview</span><span class="token punctuation">:</span>
+      <span class="token key atrule">faker</span><span class="token punctuation">:</span>
+        <span class="token key atrule">token</span><span class="token punctuation">:</span> &quot;<span class="token punctuation">{</span><span class="token punctuation">{</span> name.lastName <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> name.firstName <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><h3>Type: pattern</h3><p>With field type <code>pattern</code> you can render other patterns inside the pattern:</p><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">fields</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> pattern
+    <span class="token key atrule">preview</span><span class="token punctuation">:</span>
+      <span class="token key atrule">id</span><span class="token punctuation">:</span> image
+      <span class="token key atrule">variant</span><span class="token punctuation">:</span> primary
+      <span class="token key atrule">settings</span><span class="token punctuation">:</span>
+        <span class="token key atrule">style</span><span class="token punctuation">:</span> medium
+      <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+        <span class="token key atrule">field</span><span class="token punctuation">:</span> value
+</code></pre></div><ul><li><code>id</code> The id of the pattern.</li><li><code>variant</code> The variant of the pattern.</li><li><code>fields</code> Overwrites field preview values of the pattern.</li><li><code>settings</code> Overwrites setting preview values of the pattern.</li></ul><h3>Pattern list</h3><p>This works also with a list of patterns.</p><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">fields</span><span class="token punctuation">:</span>
+  <span class="token key atrule">images</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> pattern
+    <span class="token key atrule">multi_value_type</span><span class="token punctuation">:</span> single_value
+    <span class="token key atrule">preview</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span>
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> image
+        <span class="token key atrule">variant</span><span class="token punctuation">:</span> primary
+        <span class="token key atrule">settings</span><span class="token punctuation">:</span>
+          <span class="token key atrule">style</span><span class="token punctuation">:</span> medium
+        <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+          <span class="token key atrule">field</span><span class="token punctuation">:</span> value
+      <span class="token punctuation">-</span>
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> image
+        <span class="token key atrule">variant</span><span class="token punctuation">:</span> primary
+        <span class="token key atrule">settings</span><span class="token punctuation">:</span>
+          <span class="token key atrule">style</span><span class="token punctuation">:</span> medium
+        <span class="token key atrule">fields</span><span class="token punctuation">:</span>
+          <span class="token key atrule">field</span><span class="token punctuation">:</span> value
+</code></pre></div><p>You can control how Wingsuit will handle the resulting array of objects.</p><h4>Following options are available:</h4><ul><li><code>single_value</code>: All patterns will be rendered into a single value. The resulting variable is a string not a array. This useful if you want to add multiple objects into one area.<br/>Your pattern.twig looks like:</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
+</code></pre></div><ul><li><code>items</code> provides a list of patterns. The resulting variable is an array you can loop through.<h4>Your pattern.twig looks like:</h4></li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">for</span></span> <span class="token property">item</span> <span class="token operator">in</span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
+<span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">item</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
+<span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">endfor</span></span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
+</code></pre></div><ul><li><code>field_items</code> provides a list of objects. The rendered pattern is inside the content key. This is useful to emulate multi value field templates in drupal.</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">for</span></span> <span class="token property">item</span> <span class="token operator">in</span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
+<span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
+<span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">endfor</span></span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
+</code></pre></div><h3>Type object</h3><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">fields</span><span class="token punctuation">:</span>
+  <span class="token key atrule">items</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> object
+    <span class="token key atrule">preview</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> Datenschutz
+        <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">&quot;#&quot;</span>
+        <span class="token key atrule">in_active_trail</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> Impressum
+        <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">&quot;#&quot;</span>
+</code></pre></div><p>With field type <code>object</code> you can pass any objects to the Twig template. This is useful for the menu, for example. You can edit the JSON string with knobs.</p><h3>Visibility</h3><p>With the visibility property you can control in which app a pattern should be visible. If the property is not set, the pattern is visible in every app.</p><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">visibility</span><span class="token punctuation">:</span> storybook <span class="token punctuation">|</span> drupal <span class="token punctuation">|</span> none
+</code></pre></div>
   </div>
 
+
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Presentation templates</b><br>Learn how to create storybook preview pages for your components.</div>
+  <div>
+    
+
+
+    
+<a  href="/components/presentation" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Assets</b><br>Learn how to manage your css, js and other asses with wingsuit.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>
@@ -275,7 +322,7 @@ The value can be a string or a subobject.</p><ul><li>The string is passed to Fak
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -291,6 +338,7 @@ The value can be a string or a subobject.</p><ul><li>The string is passed to Fak
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">

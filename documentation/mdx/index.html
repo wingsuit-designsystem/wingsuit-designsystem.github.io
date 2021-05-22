@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,48 +180,58 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
-      <h1>MDX</h1><p>Let&#x27;s get started with an example:</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { Title, Subtitle } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@storybook/addon-docs/blocks&#x27;</span>;
-<span class="hljs-keyword">import</span> { PatternLoad, PatternPreview } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@wingsuit-designsystem/storybook&#x27;</span>;
+                            <div
+ class="prose lg:prose-lg"
+>
+      <h1>MDX</h1><p>Let&#x27;s get started with an example:</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Title</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Subtitle</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@storybook/addon-docs/blocks&#x27;</span><span class="token punctuation">;</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PatternLoad</span><span class="token punctuation">,</span> <span class="token maybe-class-name">PatternPreview</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@wingsuit-designsystem/storybook&#x27;</span><span class="token punctuation">;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">PatternLoad</span> <span class="hljs-attr">patternId</span>=<span class="hljs-string">&quot;grid&quot;</span>&gt;</span>
-  {(pattern) =&gt; (
-  <span class="hljs-tag">&lt;&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Title</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Subtitle</span> /&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternLoad</span></span> <span class="token attr-name">patternId</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>grid<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">  </span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">pattern</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Title</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Subtitle</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text"></span>
+<span class="token plain-text">## Simple usage</span>
+<span class="token plain-text">....</span>
+<span class="token plain-text"></span>
+<span class="token plain-text"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternPreview</span></span> <span class="token attr-name">variant</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>pattern<span class="token punctuation">.</span><span class="token method function property-access">getDefaultVariant</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token attr-name">columns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span> <span class="token attr-name">columns_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>25x50x25<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">... More documentation.</span>
+<span class="token plain-text">  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text"></span>
+<span class="token plain-text"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PatternLoad</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>(The example is from <code>organisms/grid/grid.mdx</code> in your starter kit.)</p><p>With <code>PatternLoad</code> you can load any existing pattern. <code>PatternLoad</code> calls the load function asynchronous after the pattern is loaded.
+<code>PatternPreview</code> renders the pattern with the preview data from the <code>wingsuit.yml</code> file. Each attribute is passed to the pattern.</p><h3>Presentational template</h3><p>To render a presentational template use:</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> template <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./presentational.twig&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-## Simple usage
-....
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">RenderTwig</span></span> <span class="token attr-name">data</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>template<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">RenderTwig</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">PatternPreview</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">{pattern.getDefaultVariant()}</span> <span class="hljs-attr">columns</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">columns_width</span>=<span class="hljs-string">&quot;25x50x25&quot;</span>/&gt;</span>
-... More documentation.
-  <span class="hljs-tag">&lt;/&gt;</span></span>
-  )}
-&lt;/PatternLoad&gt;</code></pre><p>(The example is from <code>organisms/grid/grid.mdx</code> in your starter kit.)</p><p>With <code>PatternLoad</code> you can load any existing pattern. <code>PatternLoad</code> calls the load function asynchronous after the pattern is loaded.
-<code>PatternPreview</code> renders the pattern with the preview data from the <code>wingsuit.yml</code> file. Each attribute is passed to the pattern.</p><h3>Presentational template</h3><p>To render a presentational template use:</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">const</span> template = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./presentational.twig&#x27;</span>);
+</code></pre></div><h2>Pattern documentation components</h2><img src="/images/grid-doc.png"/><h3>PatternProperties</h3><p>Pattern properties shows <code>Fields</code> and <code>Settings</code> from your wingsuit.yml as a tabbed table.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PatternProperties</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@wingsuit-designsystem/storybook&#x27;</span><span class="token punctuation">;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RenderTwig</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{template}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">RenderTwig</span>&gt;</span></span>;
-</code></pre><h2>Pattern documentation components</h2><img src="images/grid-doc.png"/><h3>PatternProperties</h3><p>Pattern properties shows <code>Fields</code> and <code>Settings</code> from your wingsuit.yml as a tabbed table.</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { PatternProperties } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@wingsuit-designsystem/storybook&#x27;</span>;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternProperties</span></span> <span class="token attr-name">variant</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>variant<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h3>PatternInclude</h3><p>PatternInclude shows a sample twig include.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PatternInclude</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@wingsuit-designsystem/storybook&#x27;</span><span class="token punctuation">;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">PatternProperties</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">{variant}</span> /&gt;</span></span></code></pre><h3>PatternInclude</h3><p>PatternInclude shows a sample twig include.</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { PatternInclude } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@wingsuit-designsystem/storybook&#x27;</span>;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternInclude</span></span> <span class="token attr-name">variant</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>variant<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h3>PatternDoc</h3><p>PatternDoc renders the complete automatic pattern documentation.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PatternDoc</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@wingsuit-designsystem/storybook&#x27;</span><span class="token punctuation">;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">PatternInclude</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">{variant}</span> /&gt;</span></span></code></pre><h3>PatternDoc</h3><p>PatternDoc renders the complete automatic pattern documentation.</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { PatternDoc } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@wingsuit-designsystem/storybook&#x27;</span>;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternDoc</span></span> <span class="token attr-name">pattern</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>pattern<span class="token punctuation">}</span></span> <span class="token attr-name">showInclude</span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h2>Token documentation components</h2><h3>Typeset</h3><p>To show your Typeset system use <code>&lt;Typeset ..&gt;</code>.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> fontSizes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  small<span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
+  base<span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
+  large<span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Typeset</span></span> <span class="token attr-name">fontFamily</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fontfamily<span class="token punctuation">}</span></span> <span class="token attr-name">classNamePrefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.text-<span class="token punctuation">&quot;</span></span> <span class="token attr-name">fontSizes</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fontSizes<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h3>Spacing</h3><p>To show your spacing system use <code>&lt;Spacing ..&gt;</code>.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> spacing <span class="token operator">=</span> <span class="token punctuation">{</span>
+  small<span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
+  base<span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
+  large<span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">PatternDoc</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">{pattern}</span> <span class="hljs-attr">showInclude</span> /&gt;</span></span></code></pre><h2>Token documentation components</h2><h3>Typeset</h3><p>To show your Typeset system use <code>&lt;Typeset ..&gt;</code>.</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">const</span> fontSizes = {
-  <span class="hljs-attr">small</span>: <span class="hljs-string">&#x27;0.5rem&#x27;</span>,
-  <span class="hljs-attr">base</span>: <span class="hljs-string">&#x27;1rem&#x27;</span>,
-  <span class="hljs-attr">large</span>: <span class="hljs-string">&#x27;2rem&#x27;</span>,
-}
-&lt;Typeset fontFamily={fontfamily} classNamePrefix=<span class="hljs-string">&quot;.text-&quot;</span> fontSizes={fontSizes} /&gt;</code></pre><h3>Spacing2</h3><p>To show your spacing system use <code>&lt;Spacing ..&gt;</code>.</p><pre><code class="hljs language-jsx"><span class="hljs-keyword">const</span> spacing = {
-  <span class="hljs-attr">small</span>: <span class="hljs-string">&#x27;0.5rem&#x27;</span>,
-  <span class="hljs-attr">base</span>: <span class="hljs-string">&#x27;1rem&#x27;</span>,
-  <span class="hljs-attr">large</span>: <span class="hljs-string">&#x27;2rem&#x27;</span>,
-};
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Spacing</span> <span class="hljs-attr">spacing</span>=<span class="hljs-string">{spacing}</span> <span class="hljs-attr">classNamePrefix</span>=<span class="hljs-string">&quot;.w-&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;vertical|horizontal&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Spacing</span>&gt;</span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Spacing</span></span> <span class="token attr-name">spacing</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>spacing<span class="token punctuation">}</span></span> <span class="token attr-name">classNamePrefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.w-<span class="token punctuation">&quot;</span></span> <span class="token attr-name">direction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>vertical|horizontal<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Spacing</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div>
   </div>
 
+
+  
   
         
       </div>
@@ -238,7 +251,7 @@
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -254,6 +267,7 @@
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">

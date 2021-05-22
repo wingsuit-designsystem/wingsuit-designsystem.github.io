@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,32 +180,70 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
-      <h1>Configuration</h1><p>Wingsuit comes with a <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/packages/core/src/stubs/defaultWingsuitConfig.stub.ts">preset</a> of variables that are suitable for most use cases.</p><b>The Wingsuit configuration file has three main sections</b><ul><li><p><code>apps</code> for app-specific configuration. A typical app is Drupal. Here you can configure where your app is located and how you want to compile and store your assets.</p></li><li><p><code>designSystem</code> for design system configuration. The design system is where your patterns living. Here you can configure everything around your patterns.</p></li><li><p><code>presets</code> list of loaded webpack presets. <a href="../preset-webpack">Here you can find more information</a> about webpack bundles.</p></li></ul><h2>App details</h2><p>Each app is configurable by following properties:</p><ul><li><code>type</code> the type of the app.</li><li><code>path</code> the path to the app.</li><li><code>cssMode</code> extract CSS or not.</li><li><code>designSystem</code> The name to the design system.</li><li><code>distFolder</code> the path to the dist folder.</li><li><code>assetBundleFolder</code> the folder name under the dist folder for assets.</li></ul><h2>Design systems details</h2><p>In the <code>designSystems</code> section you define the folder structure of your design system.
-Each designSystem is configurable by following properties:</p><ul><li><code>path</code> the path to the design system.</li><li><code>patternFolder</code> the folder name under the designsystem folder for patterns.</li><li><code>namespaces</code> to configure folder aliases.</li></ul><h4>Namespaces:</h4><pre><code class="hljs language-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span> );
+                            <div
+ class="prose lg:prose-lg"
+>
+      <h1>Configuration</h1><p>Wingsuit comes with a <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/packages/core/src/stubs/defaultWingsuitConfig.stub.ts">preset</a> of variables that are suitable for most use cases.</p><b>The Wingsuit configuration file has three main sections</b><ul><li><p><code>apps</code> for app-specific configuration. A typical app is Drupal. Here you can configure where your app is located and how you want to compile and store your assets.</p></li><li><p><code>designSystem</code> for design system configuration. The design system is where your patterns are living. Here you can configure everything around them.</p></li><li><p><code>presets</code> is a list of loaded webpack presets. <a href="../preset-webpack">Here you can find more information</a> about webpack bundles.</p></li></ul><h2>App details</h2><p>Each app has the following configurable properties:</p><ul><li><code>type</code> the type of the app.</li><li><code>path</code> the path to the app.</li><li><code>cssMode</code> whether to extract CSS or not.</li><li><code>designSystem</code> the name of the design system.</li><li><code>distFolder</code> the path to the dist folder.</li><li><code>assetBundleFolder</code> the folder to use for assets, under the dist folder.</li></ul><h2>Design systems details</h2><p>In the <code>designSystems</code> section you define the folder structure of your design system.
+Each design system has the following configurable properties:</p><ul><li><code>path</code> the path to the design system.</li><li><code>patternFolder</code> the folder to use for patterns, under the design system folder.</li><li><code>namespaces</code> to configure folder aliases.</li></ul><h4>Namespaces:</h4><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;path&#x27;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">const</span> patterns = path.resolve(__dirname, <span class="hljs-string">&#x27;patterns&#x27;</span>);
+<span class="token keyword">const</span> patterns <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&#x27;patterns&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-attr">tokens</span>: path.resolve(__dirname, <span class="hljs-string">&#x27;tokens&#x27;</span>),
-  <span class="hljs-attr">protons</span>: path.resolve(patterns, <span class="hljs-string">&#x27;00-protons&#x27;</span>),
-  <span class="hljs-attr">atoms</span>: path.resolve(patterns, <span class="hljs-string">&#x27;01-atoms&#x27;</span>),
-  <span class="hljs-attr">molecules</span>: path.resolve(patterns, <span class="hljs-string">&#x27;02-molecules&#x27;</span>),
-  <span class="hljs-attr">organisms</span>: path.resolve(patterns, <span class="hljs-string">&#x27;03-organisms&#x27;</span>),
-  <span class="hljs-attr">templates</span>: path.resolve(patterns, <span class="hljs-string">&#x27;04-templates&#x27;</span>),
-  <span class="hljs-attr">pages</span>: path.resolve(patterns, <span class="hljs-string">&#x27;05-pages&#x27;</span>),
-};</code></pre><p>You can use namespaces in twig and javascript imports.</p><b>TWIG:</b><pre><code class="hljs language-js">  {{ include <span class="hljs-string">&quot;@atoms/button/button.twig&quot;</span> }}</code></pre><b>Javascript:</b><pre><code class="hljs language-js">  <span class="hljs-keyword">import</span> <span class="hljs-string">&quot;atoms/button&quot;</span>;</code></pre><h3>Environment specific configuration</h3><p>With <code>environments</code> you can overwrite a configuration value for a specific environment.</p><p>Here is an example of overwriting the cssMode for development:</p><pre><code class="hljs language-js">environments: {
-  ...
-      <span class="hljs-attr">development</span>: {
-        <span class="hljs-attr">apps</span>: {
-          <span class="hljs-attr">storybook</span>: {
-            <span class="hljs-attr">cssMode</span>: <span class="hljs-string">&quot;extract&quot;</span>
-          }
-        }
-      }</code></pre><h2>Presets details</h2><p>Check the <a href="../preset-webpack">presets documentation</a> for more infos.</p>
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  tokens<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&#x27;tokens&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  protons<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;00-protons&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  atoms<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;01-atoms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  molecules<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;02-molecules&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  organisms<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;03-organisms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  templates<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;04-templates&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  pages<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;05-pages&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can use namespaces in twig and javascript imports.</p><b>TWIG:</b><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token punctuation">{</span><span class="token punctuation">{</span> include <span class="token string">&quot;@atoms/button/button.twig&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><b>Javascript:</b><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token string">&quot;atoms/button&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><h3>Environment specific configuration</h3><p>With <code>environments</code> you can overwrite a configuration value for a specific environment.</p><p>Here is an example of overwriting the cssMode for development:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">environments<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token spread operator">...</span>
+      development<span class="token operator">:</span> <span class="token punctuation">{</span>
+        apps<span class="token operator">:</span> <span class="token punctuation">{</span>
+          storybook<span class="token operator">:</span> <span class="token punctuation">{</span>
+            cssMode<span class="token operator">:</span> <span class="token string">&quot;extract&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+</code></pre></div><h2>Presets details</h2><p>Check the <a href="../preset-webpack">presets documentation</a> for more infos.</p>
   </div>
 
+
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Configure webpack</b><br>Learn how to add custom webpack configuration, or alter the existing one.</div>
+  <div>
+    
+
+
+    
+<a  href="/configurations/custom-webpack-config" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Presets</b><br>Learn about presets and how to use them.</div>
+  <div>
+    
+
+
+    
+<a  href="/configurations/preset-webpack" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>
@@ -222,7 +263,7 @@ Each designSystem is configurable by following properties:</p><ul><li><code>path
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -238,6 +279,7 @@ Each designSystem is configurable by following properties:</p><ul><li><code>path
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">

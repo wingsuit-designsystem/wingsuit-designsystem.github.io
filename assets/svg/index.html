@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,33 +180,70 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
+                            <div
+ class="prose lg:prose-lg"
+>
       <h1>SVGs</h1><h2>SVG images</h2><p>If you need SVG files as images instead of icons, put your images in an <code>images</code> folder.
-To render the SVG icon, use the ws-assets stream wrapper:</p><pre><code class="hljs language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ file_create_url(&#x27;ws-assets://images/icon.svg&#x27;)&quot;&gt;</span></code></pre><h2>SVG Icons</h2><p>Wingsuit generates an SVG sprite map for every SVG located in an <code>icons</code> folder.</p><p>To render the icons include the <code>svg atom</code> in your Twig template:</p><pre><code class="hljs language-twig"><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> &quot;@atoms/svg/svg.wig&quot; with {&quot;variant&quot;: &#x27;icon&#x27;, icon: &quot;icon&quot; }</span></code></pre><h2>Multiple SVG spritemaps.</h2><p>If you need more than one spritemap you can put your icons in a separate folder and extend the preset configuration in <code>wingsuit.yml</code>.
-For example, you need a spritemap for your language icons. Put all the icons in a folder called <code>icons-languages</code>.
-Now you need to configure the <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/packages/core/src/server/presets/svg.ts">svg preset</a> with multiple svg folders.</p><p>Here the configuration for our <code>icons-languages</code> example:</p><pre><code class="hljs language-js">  <span class="hljs-built_in">module</span>.exports = {
-    <span class="hljs-attr">parameters</span>: {
-      <span class="hljs-string">&#x27;svg&#x27;</span>: {
-        <span class="hljs-attr">sources</span>: [
-              {
-                <span class="hljs-attr">sourceFolder</span>: <span class="hljs-string">&#x27;icons&#x27;</span>,
-                <span class="hljs-attr">jsonFile</span>: path.join(appConfig.absAppPath, <span class="hljs-string">&#x27;/config/silo/svgs.json&#x27;</span>),
-                <span class="hljs-attr">spriteFilename</span>: <span class="hljs-string">&#x27;images/spritemap.svg&#x27;</span>,
-              },
-              {
-                <span class="hljs-attr">sourceFolder</span>: <span class="hljs-string">&#x27;icons-languages&#x27;</span>,
-                <span class="hljs-attr">jsonFile</span>: path.join(appConfig.absAppPath, <span class="hljs-string">&#x27;/config/silo/svgs-languages.json&#x27;</span>),
-                <span class="hljs-attr">spriteFilename</span>: <span class="hljs-string">&#x27;images/spritemap-languages.svg&#x27;</span>,
-              },
-            ],
-      }
-    },
-    ...
-  };
-</code></pre><p>After that you need to adjust <code>icons.mdx</code> file to read the new svg-languages.json.</p>
+To render the SVG icon, use the ws-assets stream wrapper:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ file_create_url(<span class="token punctuation">&#x27;</span>ws-assets://images/icon.svg<span class="token punctuation">&#x27;</span>)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></span>
+</code></pre></div><h2>SVG Icons</h2><p>Wingsuit generates an SVG sprite map for every SVG located in an <code>icons</code> folder.</p><p>To render the icons include the <code>svg atom</code> in your Twig template:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other">{% include &quot;@atoms/svg/svg.wig&quot; with {&quot;variant&quot;: &#x27;icon&#x27;, icon: &quot;icon&quot; }</span>
+</code></pre></div><h2>Multiple SVG spritemaps.</h2><p>If you need more than one spritemap you can put your icons in a separate folder and extend the preset configuration in <code>wingsuit.yml</code>.
+For example, if you need a spritemap for your language icons, put all the icons in a folder called <code>icons-languages</code>.
+Then you need to configure the <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/packages/core/src/server/presets/svg.ts">svg preset</a> with multiple svg folders.</p><p>Here&#x27;s the configuration for our <code>icons-languages</code> example:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    parameters<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&#x27;svg&#x27;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        sources<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                sourceFolder<span class="token operator">:</span> <span class="token string">&#x27;icons&#x27;</span><span class="token punctuation">,</span>
+                jsonFile<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                spriteFilename<span class="token operator">:</span> <span class="token string">&#x27;images/spritemap.svg&#x27;</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                sourceFolder<span class="token operator">:</span> <span class="token string">&#x27;icons-languages&#x27;</span><span class="token punctuation">,</span>
+                jsonFile<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs-languages.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                spriteFilename<span class="token operator">:</span> <span class="token string">&#x27;images/spritemap-languages.svg&#x27;</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token spread operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>After that you need to adjust the <code>icons.mdx</code> file to read the new svg-languages.json.</p>
   </div>
 
+
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Images & Icons</b><br>Learn how to use images and icons in your patterns.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/images" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Javascript</b><br>Learn how to use javascript in your patterns.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/javascript" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>
@@ -223,7 +263,7 @@ Now you need to configure the <a href="https://github.com/wingsuit-designsystem/
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -239,6 +279,7 @@ Now you need to configure the <a href="https://github.com/wingsuit-designsystem/
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">

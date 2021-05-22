@@ -5,10 +5,13 @@
       </head>
   <body x-data="{ isScrollDown: false, menuIsOpen: false }">
     <div class="wingsuit-page-wrapper">
+
+
+
   
 
-<header class="fixed h-16 w-full p-4 lg:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
-  <div class=" h-full flex justify-between lg:justify-none items-center md:max-w-7xl">
+<header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
+  <div class=" h-full flex justify-between md:justify-none items-center md:max-w-7xl">
     <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
       <div class="flex items-center">
         
@@ -18,10 +21,10 @@
         <span class="text-xs text-gray-300">v1.0</span>
       </div>
     </div>
-          <div class="block lg:hidden" @click="menuIsOpen = !menuIsOpen">
+          <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
         <div class="ui-hamburger-02" :class="{'is-active': menuIsOpen}"></div>
       </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block">
       <a href="https://github.com/wingsuit-designsystem/wingsuit" target="_blank">
       <svg width="60" height="60" viewBox="0 0 250 250" aria-hidden="true"
            style="fill: rgb(0, 0, 0); color: rgb(255, 255, 255); position: absolute; top: 0px; border: 0px; right: 0px; z-index: 10;">
@@ -57,15 +60,15 @@
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-25/75">
                                     
       <div class="">
-                      <div class="w-full flex-grow text-black z-20 mt-2 lg:mt-0 lg:-mt-2.5  bg-white h-full overflow-y-scroll lg:overflow-y-visible fixed lg:static left-0 top-11 bg-yellow lg:bg-transparent" :class="{'block': menuIsOpen, 'hidden lg:inline-block': !menuIsOpen}">
-  <ul class="list-reset text-center lg:text-left">
+                      <div class="w-full flex-grow text-black z-20 mt-2 md:mt-0 md:-mt-2.5  bg-white h-full overflow-y-scroll md:overflow-y-visible fixed md:static left-0 top-11 bg-yellow md:bg-transparent" :class="{'block': menuIsOpen, 'hidden md:inline-block': !menuIsOpen}">
+  <ul class="list-reset text-center md:text-left">
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
-          BASICS
+          Get Started
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/basics/introduction">Introduction</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/quick-start/tailwind">Tailwind</a>
               </li>
                       </ul>
               </li>
@@ -177,46 +180,83 @@
       </div>
                               
       <div class="">
-                          
-<div class="prose dark:prose-dark lg:prose-lg">
-      <h1>Presets</h1><p>Wingsuit uses <code>presets</code> to make webpack configurations reusable across different apps.</p><p>The goal is to deliver a community-driven set of webpack presets. Check out the predefined presets in the <a href="@TODO">default config stub</a>.</p><h2>What is a preset</h2><p>A preset provides a pre configured webpack configuration bundled in a node module.</p><p>A good starting point is the <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/presets/scss/src/index.ts">wingsuit scss bundle</a>.</p><pre><code class="hljs language-js"><span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">appConfig</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;preset-name&#x27;</span>;
-  },
-  <span class="hljs-attr">defaultConfiguration</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">appConfig</span>) </span>{
-    <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;param1&#x27;</span>: <span class="hljs-string">&#x27;value1&#x27;</span>};
-  },
-  <span class="hljs-attr">webpack</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">appConfig, config</span>) </span>{
-    <span class="hljs-keyword">return</span> {
-    <span class="hljs-comment">// Custom Webpack.</span>
-    };
-  },
-  <span class="hljs-attr">webpackFinal</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">appConfig, webpack, config</span>) </span>{
-    <span class="hljs-comment">// Alter final webpack config.</span>
-    <span class="hljs-keyword">return</span> webpack;
-  }
-}</code></pre><ul><li><code>name</code> The unique name of the preset.</li><li><code>defaultConfiguration</code> should return a default configuration. This configuration can be overwritten.</li><li><code>webpack</code> should return the webpack code</li><li><code>webpackFinal</code> is optional and should only be implemented if the preset needs to make changes to the final webpack.</li></ul><h2>Install a preset</h2><p>To install a preset add your preset to your <code>package.json</code> and add it to your <code>wingsuit.yml</code>:</p><pre><code class="hljs language-js">  <span class="hljs-built_in">module</span>.exports = {
-    ...
-    <span class="hljs-attr">presets</span>: {
-      <span class="hljs-string">&#x27;node-module-preset-name&#x27;</span>
-    }
-    ...
-  };
-</code></pre><h2>Configure a preset</h2><p>Every presets should work with zero configuration out of the box. A preset ship with a default configuration by the defaultConfiguration method.
-You can overwrite the configuration with the parameters key in your <code>wingsuit.yml</code>.</p><pre><code class="hljs language-js">  <span class="hljs-built_in">module</span>.exports = {
-    <span class="hljs-attr">parameters</span>: {
-      <span class="hljs-string">&#x27;preset-name&#x27;</span>: {
-        <span class="hljs-string">&#x27;param1&#x27;</span>: <span class="hljs-string">&#x27;newValue&#x27;</span>
-      }
-    },
-    <span class="hljs-attr">presets</span>: {
-      <span class="hljs-string">&quot;custom/Preset&quot;</span>
-    }
-    ...
-  };
-</code></pre>
+                            <div
+ class="prose lg:prose-lg"
+>
+      <h1>Presets</h1><p>Wingsuit uses <code>presets</code> to make webpack configurations reusable across different apps.</p><p>The goal is to deliver a community-driven set of webpack presets. Check out the predefined presets in the <a href="@TODO">default config stub</a>.</p><h2>What is a preset</h2><p>A preset provides a pre configured webpack configuration bundled in a node module.</p><p>A good starting point is the <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/presets/scss/src/index.ts">wingsuit scss bundle</a>.</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">name</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">appConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">return</span> <span class="token string">&#x27;preset-name&#x27;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">defaultConfiguration</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">appConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span><span class="token string">&#x27;param1&#x27;</span><span class="token operator">:</span> <span class="token string">&#x27;value1&#x27;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">webpack</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">appConfig<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Custom Webpack.</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">webpackFinal</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">appConfig<span class="token punctuation">,</span> webpack<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Alter final webpack config.</span>
+    <span class="token keyword control-flow">return</span> webpack<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>name</code> The unique name of the preset.</li><li><code>defaultConfiguration</code> should return the configuration defaults. This configuration can be overwritten.</li><li><code>webpack</code> should return the webpack code</li><li><code>webpackFinal</code> is optional and should only be implemented if the preset needs to make changes to the final webpack.</li></ul><h2>Install a preset</h2><p>To install a preset add your preset to your <code>package.json</code> and add it to your <code>wingsuit.yml</code>:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token spread operator">...</span>
+    presets<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&#x27;node-module-preset-name&#x27;</span>
+    <span class="token punctuation">}</span>
+    <span class="token spread operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2>Configure a preset</h2><p>Each preset should work with zero configuration out of the box. A preset ships with default configuration defined by the defaultConfiguration method.
+You can overwrite the configuration with the parameters key in your <code>wingsuit.yml</code>.</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    parameters<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&#x27;preset-name&#x27;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&#x27;param1&#x27;</span><span class="token operator">:</span> <span class="token string">&#x27;newValue&#x27;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    presets<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;custom/Preset&quot;</span>
+    <span class="token punctuation">}</span>
+    <span class="token spread operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div>
   </div>
 
+
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Configure webpack</b><br>Learn how to add custom webpack configuration, or alter the existing one.</div>
+  <div>
+    
+
+
+    
+<a  href="/configurations/custom-webpack-config" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Components</b><br>Learn about creating and editing components.</div>
+  <div>
+    
+
+
+    
+<a  href="/components/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>
@@ -236,7 +276,7 @@ You can overwrite the configuration with the parameters key in your <code>wingsu
 
 
   <div  class="max-w-5xl mx-auto w-full px-6">
-            <div class="space-x-8 inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <div class="space-x-8 flex sm:ml-auto sm:mt-0 mt-2 justify-center">
           <a
             class="w-12"
             href="https://drupaltwig.slack.com/archives/C01C82BH864" target="_blank" rel="noreferrer noopener"><img
@@ -252,6 +292,7 @@ You can overwrite the configuration with the parameters key in your <code>wingsu
         </div>
   </div>
 </footer>
+
 </div>
 
     <script type="text/javascript">
