@@ -1,8 +1,9 @@
 <html>
-  <head>
+  <meta>
     <link rel="preload" href="/font/Inter.var.woff2" as="font" type="font/woff2" crossorigin>
 
-    <title></title>
+    <title>Globals | Wingsuit</title>
+    <meta type="description" content="global scope variables inside your twig template."/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170378669-1"></script>
     <script>
@@ -265,6 +266,16 @@
               </li>
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
+          STARTER KITS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/starter-kits/tailwind-drupal">TailwindCSS + Drupal</a>
+              </li>
+                      </ul>
+              </li>
+          <li>
+        <div class="p-2 my-2.5 uppercase font-bold">
           COMPONENTS
         </div>
                   <ul class="list-reset mb-7">
@@ -346,42 +357,10 @@
  class="max-w-none prose lg:prose-lg"
 >
       <h1>Global variables</h1><p>If you need variables with global scope inside your twig template you can place a YAML file to <code>apps/storybook/config</code>.</p><p>You can access every variable directly in your twig template.</p><h2>Frontend metadata as global variables</h2><p>To expose metadata from front-end frameworks to storybook webpack plugins you can generate JSON files and store them under <code>apps/storybook/config/silo</code>. Wingsuit will automatically read these files and handle the content as global variables.
-Wingsuit provides a plugin for tailwind metadata.</p><p>@TODO provides its own plugins.</p>
+Wingsuit provides a plugin for tailwind metadata.</p>
   </div>
 
 
-      <div class="pt-6 md:pt-14">
-      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
-              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
-  <div class="flex-grow pr-4"><b>UI Patterns</b><br>Learn how wingsuit leverages UI patterns.</div>
-  <div>
-    
-
-
-    
-<a  href="/components/wingsuit" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
-continue
-  </a>
-
-  </div>
-</div>
-
-              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
-  <div class="flex-grow pr-4"><b>Presentation templates</b><br>Learn how to create storybook preview pages for your components.</div>
-  <div>
-    
-
-
-    
-<a  href="/components/presentation" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
-continue
-  </a>
-
-  </div>
-</div>
-
-          </div>
-  
   
         
       </div>

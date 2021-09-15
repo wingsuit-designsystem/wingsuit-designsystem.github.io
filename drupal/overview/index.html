@@ -1,8 +1,9 @@
 <html>
-  <head>
+  <meta>
     <link rel="preload" href="/font/Inter.var.woff2" as="font" type="font/woff2" crossorigin>
 
-    <title></title>
+    <title> | Wingsuit</title>
+    <meta type="description" content=""/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170378669-1"></script>
     <script>
@@ -265,6 +266,16 @@
               </li>
           <li>
         <div class="p-2 my-2.5 uppercase font-bold">
+          STARTER KITS
+        </div>
+                  <ul class="list-reset mb-7">
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/starter-kits/tailwind-drupal">TailwindCSS + Drupal</a>
+              </li>
+                      </ul>
+              </li>
+          <li>
+        <div class="p-2 my-2.5 uppercase font-bold">
           COMPONENTS
         </div>
                   <ul class="list-reset mb-7">
@@ -345,17 +356,15 @@
                             <div
  class="max-w-none prose lg:prose-lg"
 >
-      <hr/><p>id: &#x27;overview&#x27;</p><h2>title: &#x27;Component-Based Theming in Drupal&#x27;</h2><p>Drupal theming without a component based solution can be very frustrating, prone to errors and hard to maintain.</p><p>It is very likely that you need to theme the same component more than once. Once you need your button inside as a field, next time you need the same button inside your node template. The solution most developer took is to copy the template and adjust them to their needs.
-You distribute your component markup across the project and changes to a component must be done on several places inside your project.  </p><p>This get even more worse if you use a modern CSS framework like tailwind where everything is configured through classes directly on the element.
-Using tailwind without a component based architecture can you lead to the hell.</p><p>Thinking in components makes it much easier to structure your layout. <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a> or others helps you to structure your layout and makes it easier for every developer to follow the same path.    </p><h3>Presenter template</h3><p>The presenter template is a drupal theme template which <code>includes</code> the component template and provides all need variables.
-If you need to theme your link field with the button component you create a field template <code>field--field-link.html.twig</code> and include the button component like this:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> 
+      <h1>Component-Based Theming in Drupal&#x27;</h1><p>Drupal theming without a component based solution increase the productivity</p><p>It is very likely that you need to theme the same component more than once. Once you need your button inside as a field, next time you need the same button inside your node template. The solution most developer took is to copy the template and adjust them to their needs.
+You distribute your component markup across the project and changes to a component must be done on several places inside your project.</p><p>Thinking in components makes it much easier to structure your layout. <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a> or others helps you to structure your layout and makes it easier for every developer to follow the same path.</p><h3>Presenter template</h3><p>The presenter template is a drupal theme template which <code>includes</code> the component template and provides all need variables.
+If you need to theme your link field with the button component you create a field template <code>field--field-link.html.twig</code> and include the button component like this:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span>
   <span class="token keyword">include</span></span> <span class="token string"><span class="token punctuation">&quot;</span>@atoms/button/button.twig<span class="token punctuation">&quot;</span></span> <span class="token property">with</span> <span class="token punctuation">{</span><span class="token string"><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#title<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string"><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#url<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
 <span class="token rd"><span class="token punctuation">%}</span></span></span>
 </code></pre></div>
   </div>
 
 
-  
   
         
       </div>
