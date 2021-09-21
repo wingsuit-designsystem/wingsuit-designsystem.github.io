@@ -354,7 +354,7 @@
                               
       <div class="">
                             <div
- class="max-w-none prose lg:prose-lg"
+ class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>Visual Testing</h1><p>Visual tests, also called visual regression tests, catch bugs in UI appearance. They work by taking screenshots of every story and comparing them commit-to-commit to identify changes.</p><p>To make Wingsuit work with visual regression tests you can configure the seed of the faker plugin with the environment <code>STORYBOOK_WINGSUIT_FAKER_SEED</code>.
 The seed must be a numeric value.</p><p>With a configured seed the faker plugin will generate the same faked values. So a visual testing tool won&#x27;t detect text changes any more.</p><p>Here an example to export your patterns to chromatic with the same faker values:</p><div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">&amp;quot;chromatic&amp;quot;: &amp;quot;cross-env-shell STORYBOOK_WINGSUIT_FAKER_SEED=4242 \&amp;quot;npx chromatic --project-token TOKEN\&amp;quot;&amp;quot;</code></pre></div>
@@ -370,7 +370,7 @@ The seed must be a numeric value.</p><p>With a configured seed the faker plugin 
 
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
       </div>
   <div class="bg-black py-6 flex items-center">
@@ -395,7 +395,7 @@ The seed must be a numeric value.</p><p>With a configured seed the faker plugin 
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 

@@ -354,7 +354,7 @@
                               
       <div class="">
                             <div
- class="max-w-none prose lg:prose-lg"
+ class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>CMS APP</h1><p>Wingsuit also ships with a generic CMS APP.</p><p>To install the app run:</p><div class="remark-highlight"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> ws generate-app
 </code></pre></div><p>Wingsuit adds a config entry to your Wingsuit YAML. Check out the <a href="/configurations/details">configuration page</a> for more details.</p><p>Run either <code>yarn ws dev cms</code> for dev mode or for build mode <code>yarn ws build cms</code>.</p><p>After starting the app Wingsuit generates a dist folder with all assets and templates.</p><h2>Template path</h2><p>For some CMS it is not possible to load TWIG templates from a different location. With <code>assetAtomicFolder: &#x27;../templates&#x27;</code> you can point your templates to folder outside the dist folder.
@@ -371,7 +371,7 @@ The path is relative to the dist folder. The CMS preset will rename the folder s
 
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
       </div>
   <div class="bg-black py-6 flex items-center">
@@ -396,7 +396,7 @@ The path is relative to the dist folder. The CMS preset will rename the folder s
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 

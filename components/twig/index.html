@@ -354,7 +354,7 @@
                               
       <div class="">
                             <div
- class="max-w-none prose lg:prose-lg"
+ class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>Twig only</h1><p>A Twig only component works without any wingsuit YAML file. The patterns are useful if you don&#x27;t need or don&#x27;t want a UI Pattern integration.</p><p>A typical use case for Twig only components are menu or header components.</p><p>The data for these components can be provided as variables or defined globally inside YAML files in <code>apps/storybook/data</code>. So typically</p><b>A twig only component contains:</b>* index.js * pattern.stories.jsx * pattern.twig * css file (optional) * javascript file. (optional)<p>Wingsuit provides the react component <code>RenderTwig</code> to render twig templates:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">RenderTwig</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;@wingsuit-designsystem/storybook&#x27;</span><span class="token punctuation">;</span>
 <span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">React</span></span> <span class="token keyword module">from</span> <span class="token string">&#x27;react&#x27;</span><span class="token punctuation">;</span>
@@ -379,7 +379,7 @@
 
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
       </div>
   <div class="bg-black py-6 flex items-center">
@@ -404,7 +404,7 @@
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 

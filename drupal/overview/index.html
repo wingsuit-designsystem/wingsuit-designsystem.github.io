@@ -354,7 +354,7 @@
                               
       <div class="">
                             <div
- class="max-w-none prose lg:prose-lg"
+ class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>Component-Based Theming in Drupal&#x27;</h1><p>Drupal theming without a component based solution increase the productivity</p><p>It is very likely that you need to theme the same component more than once. Once you need your button inside as a field, next time you need the same button inside your node template. The solution most developer took is to copy the template and adjust them to their needs.
 You distribute your component markup across the project and changes to a component must be done on several places inside your project.</p><p>Thinking in components makes it much easier to structure your layout. <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a> or others helps you to structure your layout and makes it easier for every developer to follow the same path.</p><h3>Presenter template</h3><p>The presenter template is a drupal theme template which <code>includes</code> the component template and provides all need variables.
@@ -374,7 +374,7 @@ If you need to theme your link field with the button component you create a fiel
 
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
       </div>
   <div class="bg-black py-6 flex items-center">
@@ -399,7 +399,7 @@ If you need to theme your link field with the button component you create a fiel
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 

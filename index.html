@@ -344,7 +344,7 @@
 
   <div  class="max-w-6xl mx-auto w-full pb-8 px-6">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <h1 class='font-medium'>Build CMS independent Twig Components in Storybook</h1><p class='lead font-medium'> A modern way of building, maintaining and documenting your visual driven twig components in storybook with an automated and opinionated integration workflow for your CMS. <br> </p>
   </div>
@@ -394,14 +394,14 @@ Drupal Kickstarter
     <div x-data="{feature: null, key: 'tailwind'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <h2>1. Define your Design Tokens</h2><p>Everything starts with well defined Design Tokens. <br> Collect all your spaces colors typography from your design before you start coding components. Good Design Tokens are a big timesaver!</p> 
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your technology:</b>
   </div>
@@ -413,21 +413,21 @@ Drupal Kickstarter
 
 
 
-<div  @click="key=&#39;tailwind&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;tailwind&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;tailwind&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;tailwind&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   TailwindCSS
 </div>
                   
 
 
 
-<div  @click="key=&#39;scss&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;scss&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;scss&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;scss&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   SCSS
 </div>
               </div>
                               <div x-show="key === 'tailwind'">
                       <div class="pb-6">
             <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <p>TailwindCSS is the <b>API</b> for your design system. All tailwind.config.js settings are automaticly documented in Storybook. </p>
   </div>
@@ -444,7 +444,7 @@ Drupal Kickstarter
 
 
 
-<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Colors
 </div>
                           </div>
@@ -592,7 +592,7 @@ const colors = tailwindConfig.tailwind.theme.colors;
                               <div x-show="key === 'scss'">
                       <div class="pb-6">
             <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <p>Not every SCSS variable is a Design Token. Collect your Tokens in SCSS collections and export them. Wingsuit will document automaticly exported SCSS variables.</p>
   </div>
@@ -609,7 +609,7 @@ const colors = tailwindConfig.tailwind.theme.colors;
 
 
 
-<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Colors
 </div>
                           </div>
@@ -774,14 +774,14 @@ const colors = require('tokens/exports/_colors.scss');
     <div x-data="{feature: null, key: 'base'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <h2>2.1. Build your UI Patterns</h2> <p>When you are done with your <b>design tokens</b> you can continue with building your patterns. Start with your smallest components first, followed by the larger ones. <br/> </p>
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your wingsuit.yml sections:</b>
   </div>
@@ -793,7 +793,7 @@ const colors = require('tokens/exports/_colors.scss');
 
 
 
-<div  @click="key=&#39;base&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;base&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;base&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;base&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Base
 </div>
               </div>
@@ -810,36 +810,35 @@ const colors = require('tokens/exports/_colors.scss');
 
 
 
-<div  @click="key=&#39;canvas&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;canvas&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;canvas&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;canvas&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Canvas
 </div>
                           </div>
             
               <div x-show="key === 'canvas'">
                                                   
-
-      
-
+  
 
 
-<div  @click="$store.component_feature=&#39;fields&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;fields&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+
+<div  @click="$store.component_feature=&#39;fields&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;fields&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white rounded-full">
   Fields
 </div>
-      
+  
 
 
 
-<div  @click="$store.component_feature=&#39;settings&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;settings&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="$store.component_feature=&#39;settings&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;settings&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white rounded-full">
   Settings
 </div>
-      
+  
 
 
 
-<div  @click="$store.component_feature=&#39;variants&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;variants&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="$store.component_feature=&#39;variants&#39;" :class="{ &#39;bg-black text-white&#39;: $store.component_feature === &#39;variants&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white rounded-full">
   Variants
 </div>
-  <div class="pb-8 pt-2">
+<div class="pb-8 pt-2">
     <div x-show="$store.component_feature === 'fields'">
     <p><p>A field holds your data from your CMS.</p></p>
   </div>
@@ -1028,14 +1027,14 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
     <div x-data="{feature: null, key: 'automatic'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <h2>2.2. Document your components</h2>
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your documentation way:</b>
   </div>
@@ -1047,21 +1046,21 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
 
 
 
-<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;automatic&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;automatic&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Automatic
 </div>
                   
 
 
 
-<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;mdx&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;mdx&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   MDX
 </div>
               </div>
                               <div x-show="key === 'automatic'">
                       <div class="pb-6">
             <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <p>Wingsuit provides Storybook DocBlocks as the building blocks to create full featured documentation right away from the wingsuit.yml.</p>
   </div>
@@ -1078,7 +1077,7 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
 
 
 
-<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;automatic&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;automatic&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Automatic
 </div>
                           </div>
@@ -1230,7 +1229,7 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
                               <div x-show="key === 'mdx'">
                       <div class="pb-6">
             <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <p>You want to tell more about your component. With Wingsuit you can render your Twig component in your Storyboook MDX documentantion file.</p>
   </div>
@@ -1247,7 +1246,7 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
 
 
 
-<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;mdx&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;mdx&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   MDX
 </div>
                           </div>
@@ -1485,14 +1484,14 @@ To configure the spacing between the columns use the gutter configuration in the
     <div x-data="{feature: null, key: 'drupal'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <h2>3. Make Love.</h2><p>After finalizing your component, you can easily use it in other apps like Drupal.</p>
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your flavor:</b>
   </div>
@@ -1504,14 +1503,14 @@ To configure the spacing between the columns use the gutter configuration in the
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;drupal&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other_cms&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;other_cms&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;other_cms&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other_cms&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Other CMS
 </div>
               </div>
@@ -1528,14 +1527,14 @@ To configure the spacing between the columns use the gutter configuration in the
 
 
 
-<div  @click="key=&#39;ui_patterns&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;ui_patterns&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;ui_patterns&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;ui_patterns&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   UI Patterns
 </div>
                               
 
 
 
-<div  @click="key=&#39;presenter&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;presenter&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;presenter&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;presenter&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Presenter template
 </div>
                           </div>
@@ -1543,7 +1542,7 @@ To configure the spacing between the columns use the gutter configuration in the
               <div x-show="key === 'ui_patterns'">
                                   <div class="pb-8 pt-4">
                     <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <p>With UI Patterns no code is needed. The UI Patterns ecosystem offers a lot of modules that help you to manage the mapping without presenter templates. But there are still corners in Drupal where you need a presenter templates.</p> <p>Don't forget to run <code class="language-bash">yarn ws dev drupal</code></p>
   </div>
@@ -1624,7 +1623,7 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
                               <div x-show="key === 'other_cms'">
                       <div class="pb-6">
             <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <div class="relative">
 <p>If you don't use Drupal install the cms app with <code class="language-bash">yarn ws generate-app</code> and run <code class="language-bash">yarn ws dev cms</code> to compile your CSS and templates.</p><p> You can also install the drupal app with <code class="language-bash">yarn ws generate-app</code> and run <code class="language-bash">yarn ws dev drupal</code> </p>
@@ -1644,7 +1643,7 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
 
 
 
-<div  @click="key=&#39;vanilla&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;vanilla&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;vanilla&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;vanilla&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Presenter
 </div>
                           </div>
@@ -1722,20 +1721,20 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
 
 
 
-<div  class="bg-gray-100">
-  <div  class="max-w-6xl mx-auto w-full pb-10 md:pb-20 pt-10 md:pt-20 px-6">
+<div  class="dark bg-black">
+  <div  class="max-w-6xl mx-auto w-full pb-20 md:pb-24 pt-10 md:pt-20 px-6">
     
     <div x-data="{feature: null, key: 'drupal'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose text-center max-w-3xl mx-auto max-w-none prose-lg md:prose-2xl"
 >
-      <div class="text-center"><h2>Try it now!</h2> <p>Get started using the automated command line tool. This command creates a Wingsuit demo project. The demo page uses the atomic design principle to structure the patterns..</p> </div>
+      <h2>Try it now!</h2> <p>Get started using the automated command line tool. This command creates a Wingsuit demo project. The demo page uses the atomic design principle to structure the patterns..</p> 
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your flavor:</b>
   </div>
@@ -1747,14 +1746,14 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;drupal&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;other&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Vanilla
 </div>
               </div>
@@ -1902,33 +1901,61 @@ yarn ws dev cms</code></pre>
 
           </div>
     
-<div class="text-center pt-10">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div  class="max-w-6xl mx-auto w-full pb-10 md:pb-20 pt-10 md:pt-20 px-6">
+          
+            
+
+
+  <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
+                                    
+      <div class="">
+          
   <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
-      <h2>Or try...</h2>
+      
+<h2><div class="text-2xl">You might also try ...</div>Drupal Kickstarter</h2>
+<p>Wingsuit Kickstarter is the fastest way to start your Drupal project with Wingsuit. The Kickstarter uses UI Patterns to map Patterns to Drupal and Acquia Blt for automation.
+</p>
+
   </div>
 
-  <div class="pt-8">
+
+      </div>
+                              
+      <div class="">
+            <div class="flex items-center justify-center pt-20">
   
 
 
     
 <a  href="/drupal/ui_patterns/" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-4 md:py-4 md:px-8 text-xl md:text-3xl">
-Drupal Kickstarter
+Get Started
   </a>
 
   </div>
-</div>
+
+      </div>
+      </div>
 
     </div>
-</div>
 
 
   
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
           
 
@@ -2018,7 +2045,7 @@ Drupal Kickstarter
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 

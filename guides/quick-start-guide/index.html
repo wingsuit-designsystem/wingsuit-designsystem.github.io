@@ -354,7 +354,7 @@
                               
       <div class="">
                             <div
- class="max-w-none prose lg:prose-lg"
+ class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>Quickstart guide</h1><h2>Prerequisites</h2><ul><li><p><a href="https://nodejs.org">Node <code>^12</code></a></p></li><li><p><a href="https://classic.yarnpkg.com/">YARN <code>^1.22</code></a> OR <a href="https://docs.npmjs.com/">NPM <code>^6.10</code></a></p></li><li><p><a href="https://php.net">PHP <code>^7.0.0</code></a></p></li></ul><p>Get started using the automated command line tool. This command creates a Wingsuit demo project, which uses the <a href="https://bradfrost.com/blog/post/atomic-web-design/">atomic design guidelines</a> to structure the patterns.</p>
   </div>
@@ -366,19 +366,19 @@
 
 
 <div  class="">
-  <div  class="mx-auto w-full pb-10 md:pb-20">
+  <div  class="mx-auto w-full pb-20 md:pb-24">
     
     <div x-data="{feature: null, key: 'drupal'}">
       <div class="pb-10">
       <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose text-center max-w-3xl mx-auto max-w-none prose-lg md:prose-2xl"
 >
       
   </div>
       </div>
               <div class="pb-2">
           <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
       <b>Choose your flavor:</b>
   </div>
@@ -390,14 +390,14 @@
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;drupal&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;other&#39; }" class="md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 inline-block rounded-full border-black">
+<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Vanilla
 </div>
               </div>
@@ -545,27 +545,55 @@ yarn ws dev cms</code></pre>
 
           </div>
     
-<div class="text-center pt-10">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div  class="max-w-6xl mx-auto w-full pb-10 md:pb-20 pt-10 md:pt-20 px-6">
+          
+            
+
+
+  <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
+                                    
+      <div class="">
+          
   <div
- class="max-w-none prose prose-lg md:prose-2xl"
+ class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
-      <h2>Or try...</h2>
+      
+<h2><div class="text-2xl">You might also try ...</div>Drupal Kickstarter</h2>
+<p>Wingsuit Kickstarter is the fastest way to start your Drupal project with Wingsuit. The Kickstarter uses UI Patterns to map Patterns to Drupal and Acquia Blt for automation.
+</p>
+
   </div>
 
-  <div class="pt-8">
+
+      </div>
+                              
+      <div class="">
+            <div class="flex items-center justify-center pt-20">
   
 
 
     
 <a  href="/drupal/ui_patterns/" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-4 md:py-4 md:px-8 text-xl md:text-3xl">
-Drupal Kickstarter
+Get Started
   </a>
 
   </div>
-</div>
+
+      </div>
+      </div>
 
     </div>
-</div>
 
 
       <div class="pt-6 md:pt-14">
@@ -595,7 +623,7 @@ continue
 
       </main>
 
-  <footer class="text-gray-700 body-font">
+  <div>
   <div class="bg-yellow-100">
       </div>
   <div class="bg-black py-6 flex items-center">
@@ -620,7 +648,7 @@ continue
         </div>
         </div>
   </div>
-</footer>
+</div>
 
 </div>
 
