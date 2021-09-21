@@ -119,8 +119,8 @@
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
   <div class=" h-full flex justify-between md:justify-none items-center">
-    <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
-      <div class="flex items-center">
+    <div class="w-4/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
+      <div class="flex items-center -ml-3 md:ml-0">
         
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
@@ -413,14 +413,14 @@ Drupal Kickstarter
 
 
 
-<div  @click="key=&#39;tailwind&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;tailwind&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;tailwind&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;tailwind&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   TailwindCSS
 </div>
                   
 
 
 
-<div  @click="key=&#39;scss&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;scss&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;scss&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;scss&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   SCSS
 </div>
               </div>
@@ -432,19 +432,19 @@ Drupal Kickstarter
       <p>TailwindCSS is the <b>API</b> for your design system. All tailwind.config.js settings are automaticly documented in Storybook. </p>
   </div>
             </div>
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
                             <div>
                                               <div x-data="{key: 'colors'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Colors
 </div>
                           </div>
@@ -588,7 +588,6 @@ const colors = tailwindConfig.tailwind.theme.colors;
           </div>
           </div>
         </div>
-
                               <div x-show="key === 'scss'">
                       <div class="pb-6">
             <div
@@ -597,19 +596,19 @@ const colors = tailwindConfig.tailwind.theme.colors;
       <p>Not every SCSS variable is a Design Token. Collect your Tokens in SCSS collections and export them. Wingsuit will document automaticly exported SCSS variables.</p>
   </div>
             </div>
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
                             <div>
                                               <div x-data="{key: 'colors'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;colors&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;colors&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Colors
 </div>
                           </div>
@@ -758,7 +757,6 @@ const colors = require('tokens/exports/_colors.scss');
           </div>
           </div>
         </div>
-
           </div>
     
     </div>
@@ -793,24 +791,24 @@ const colors = require('tokens/exports/_colors.scss');
 
 
 
-<div  @click="key=&#39;base&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;base&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;base&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;base&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Base
 </div>
               </div>
                               <div x-show="key === 'base'">
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
                             <div>
                                               <div x-data="{key: 'canvas'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;canvas&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;canvas&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;canvas&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;canvas&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Canvas
 </div>
                           </div>
@@ -1011,7 +1009,6 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
           </div>
           </div>
         </div>
-
           </div>
     
     </div>
@@ -1046,14 +1043,14 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
 
 
 
-<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;automatic&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;automatic&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Automatic
 </div>
                   
 
 
 
-<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;mdx&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;mdx&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   MDX
 </div>
               </div>
@@ -1065,19 +1062,19 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
       <p>Wingsuit provides Storybook DocBlocks as the building blocks to create full featured documentation right away from the wingsuit.yml.</p>
   </div>
             </div>
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
                             <div>
                                               <div x-data="{key: 'automatic'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;automatic&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;automatic&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;automatic&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Automatic
 </div>
                           </div>
@@ -1225,7 +1222,6 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
           </div>
           </div>
         </div>
-
                               <div x-show="key === 'mdx'">
                       <div class="pb-6">
             <div
@@ -1234,19 +1230,19 @@ variant == 'horizontal' ? 'h-auto -m-8 mr-8'</div>] %}
       <p>You want to tell more about your component. With Wingsuit you can render your Twig component in your Storyboook MDX documentantion file.</p>
   </div>
             </div>
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1 md:grid-cols-2">
                             <div>
                                               <div x-data="{key: 'mdx'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;mdx&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;mdx&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;mdx&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   MDX
 </div>
                           </div>
@@ -1468,7 +1464,6 @@ To configure the spacing between the columns use the gutter configuration in the
           </div>
           </div>
         </div>
-
           </div>
     
     </div>
@@ -1503,38 +1498,38 @@ To configure the spacing between the columns use the gutter configuration in the
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other_cms&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other_cms&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;other_cms&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other_cms&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Other CMS
 </div>
               </div>
                               <div x-show="key === 'drupal'">
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1">
                             <div>
                                               <div x-data="{key: 'ui_patterns'}">
-            <div  class="pb-4">
+            <div  class="pb-4 flex space-x-3">
                               
 
 
 
-<div  @click="key=&#39;ui_patterns&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;ui_patterns&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;ui_patterns&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;ui_patterns&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   UI Patterns
 </div>
                               
 
 
 
-<div  @click="key=&#39;presenter&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;presenter&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;presenter&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;presenter&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Presenter template
 </div>
                           </div>
@@ -1619,7 +1614,6 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
           </div>
           </div>
         </div>
-
                               <div x-show="key === 'other_cms'">
                       <div class="pb-6">
             <div
@@ -1631,19 +1625,19 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
 
   </div>
             </div>
-                    <div class="pt-8">
+                    <div>
             
 
 
   <div  class="gap-4 md:gap-5 lg:gap-7 grid grid-cols-1">
                             <div>
                                               <div x-data="{key: 'vanilla'}">
-            <div  class="pb-4 hidden">
+            <div  class="pb-4 flex space-x-3 hidden">
                               
 
 
 
-<div  @click="key=&#39;vanilla&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;vanilla&#39; }" class="inline-block md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;vanilla&#39;" :class="{ &#39;bg-black text-white&#39;: key === &#39;vanilla&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Presenter
 </div>
                           </div>
@@ -1711,7 +1705,6 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
           </div>
           </div>
         </div>
-
           </div>
     
     </div>
@@ -1727,7 +1720,7 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
     <div x-data="{feature: null, key: 'drupal'}">
       <div class="pb-10">
       <div
- class="dark:prose-dark prose text-center max-w-3xl mx-auto max-w-none prose-lg md:prose-2xl"
+ class="dark:prose-dark prose text-center max-w-3xl mx-auto prose-lg md:prose-2xl"
 >
       <h2>Try it now!</h2> <p>Get started using the automated command line tool. This command creates a Wingsuit demo project. The demo page uses the atomic design principle to structure the patterns..</p> 
   </div>
@@ -1746,19 +1739,19 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Vanilla
 </div>
               </div>
                               <div x-show="key === 'drupal'">
-                    <div class="pt-8">
+                    <div>
             
 
 
@@ -1820,9 +1813,8 @@ src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
           </div>
           </div>
         </div>
-
                               <div x-show="key === 'other'">
-                    <div class="pt-8">
+                    <div>
             
 
 
@@ -1898,7 +1890,6 @@ yarn ws dev cms</code></pre>
           </div>
           </div>
         </div>
-
           </div>
     
     </div>

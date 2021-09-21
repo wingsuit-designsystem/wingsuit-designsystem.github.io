@@ -121,8 +121,8 @@
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
   <div class=" h-full flex justify-between md:justify-none items-center">
-    <div class="w-3/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
-      <div class="flex items-center">
+    <div class="w-4/6 md:w-2/6 max-w-xs md:max-w-7xl ml-3">
+      <div class="flex items-center -ml-3 md:ml-0">
         
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
@@ -371,7 +371,7 @@
     <div x-data="{feature: null, key: 'drupal'}">
       <div class="pb-10">
       <div
- class="dark:prose-dark prose text-center max-w-3xl mx-auto max-w-none prose-lg md:prose-2xl"
+ class="dark:prose-dark prose text-center max-w-3xl mx-auto prose-lg md:prose-2xl"
 >
       
   </div>
@@ -390,19 +390,19 @@
 
 
 
-<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;drupal&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;drupal&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Drupal opinionated
 </div>
                   
 
 
 
-<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
+<div  @click="key=&#39;other&#39;" :class="{ &#39;bg-black text-white dark:bg-white dark:text-black&#39;: key === &#39;other&#39; }" class="flex-1 flex flex-col justify-center md:text-2xl font-sans font-medium cursor-pointer border-2 px-4 text-center py-1 border-black dark:text-white dark:border-white">
   Vanilla
 </div>
               </div>
                               <div x-show="key === 'drupal'">
-                    <div class="pt-8">
+                    <div>
             
 
 
@@ -464,9 +464,8 @@
           </div>
           </div>
         </div>
-
                               <div x-show="key === 'other'">
-                    <div class="pt-8">
+                    <div>
             
 
 
@@ -542,7 +541,6 @@ yarn ws dev cms</code></pre>
           </div>
           </div>
         </div>
-
           </div>
     
     </div>
