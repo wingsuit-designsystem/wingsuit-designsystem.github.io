@@ -318,6 +318,9 @@
         </div>
                   <ul class="list-reset mb-7">
                           <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline  bg-teal-300 " href="/drupal/overview">Thinking in Components!</a>
+              </li>
+                          <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/drupal/ui_patterns">Wingsuit Kickstarter</a>
               </li>
                       </ul>
@@ -356,12 +359,14 @@
                             <div
  class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
-      <h1>Component-Based Theming in Drupal&#x27;</h1><p>Drupal theming without a component based solution increase the productivity</p><p>It is very likely that you need to theme the same component more than once. Once you need your button inside as a field, next time you need the same button inside your node template. The solution most developer took is to copy the template and adjust them to their needs.
-You distribute your component markup across the project and changes to a component must be done on several places inside your project.</p><p>Thinking in components makes it much easier to structure your layout. <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a> or others helps you to structure your layout and makes it easier for every developer to follow the same path.</p><h3>Presenter template</h3><p>The presenter template is a drupal theme template which <code>includes</code> the component template and provides all need variables.
+      <h1>Thinking in Components!</h1><h2>Component-Based Theming in Drupal&#x27;</h2><p>When it comes to Drupal themes the easy and fast way is to just theme your nodes or taxonomies as we see it.
+It is very likely that you need to theme the same component more than once.</p><p>What if we thought about building components so that they are configurable and reusable across different entities, views or blocks.
+Each component is the single point of view inside your theme. This is especially important for utility first frameworks like TailwindCSS.</p><p>If we could do that then we would be able to deliver your theme at a much faster. It is much faster to add new content types.</p><p>Drupal supports two possibilities for component based theming. Both ways are working with Wingsuit.</p><h3>1. Presenter template</h3><p>The presenter template is a Drupal theme template which <code>includes</code> the component template and provides all need variables.
 If you need to theme your link field with the button component you create a field template <code>field--field-link.html.twig</code> and include the button component like this:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span>
   <span class="token keyword">include</span></span> <span class="token string"><span class="token punctuation">&quot;</span>@atoms/button/button.twig<span class="token punctuation">&quot;</span></span> <span class="token property">with</span> <span class="token punctuation">{</span><span class="token string"><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#title<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string"><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#url<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
 <span class="token rd"><span class="token punctuation">%}</span></span></span>
-</code></pre></div>
+</code></pre></div><h3>2. UI Patterns Ecosystem</h3><p>With UI Patterns you can map your entity fields to a component without additional mapping code.
+The UI Patterns ecosystem offering additional modules to map nearly any corner of Drupal to a component.</p><div class="relative" style="padding-top:81.81818181818181%"><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe></div>
   </div>
 
 
