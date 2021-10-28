@@ -112,7 +112,7 @@
     <link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json">
 
   </head>
-  <body x-data="{ isScrollDown: false, menuIsOpen: false }">
+  <body x-data="{ menuIsOpen: false, modal: { visible: false, url:''} }">
     <div class="wingsuit-page-wrapper">
 
   
@@ -339,8 +339,9 @@
         </div>
                   
 
+
 <section class="pt-16 md:pt-28">
-  
+    
 
 
 
@@ -351,8 +352,8 @@
 >
       <h1 class='font-medium'>Build CMS independent Twig Components in Storybook</h1><p class='lead font-medium'> A modern way of building, maintaining and documenting your visual driven twig components in storybook with an automated and opinionated integration workflow for your CMS. <br> </p>
   </div>
-      <div class="flex space-x-4 py-8 lg:py-14">
-        
+              <div class="flex space-x-4 py-8 lg:py-14">
+          
 
 
     
@@ -367,8 +368,8 @@ Online Demo
 Drupal Kickstarter
   </a>
 
-      </div>
-      </div>
+        </div>
+            </div>
   
 
 
@@ -1542,15 +1543,14 @@ To configure the spacing between the columns use the gutter configuration in the
                     <div
  class="dark:prose-dark prose max-w-none prose-lg md:prose-2xl"
 >
-      <p>With UI Patterns no code is needed. The UI Patterns ecosystem offers a lot of modules that help you to manage the mapping without presenter templates. But there are still corners in Drupal where you need a presenter templates.</p> <p>Don't forget to run <code class="language-bash">yarn ws dev drupal</code></p>
+      <p>With UI Patterns no code is needed. The UI Patterns ecosystem offers a lot of modules that help you to manage the mapping without presenter templates. But there are still corners in Drupal where you need a presenter templates.</p>
+<p>Don't forget to run <code class=\"language-bash\">yarn ws dev drupal</code></p>
+<p><div class="relative cursor-pointer" @click="$store.modal.url='https://www.youtube.com/embed/xTmmkt-BdFM?&autoplay=1&mute=1'; $store.modal.visible = true;"><div class="play-icon"></div><img src='images/mariage.png'></div></p>
+
   </div>
 
                   </div>
-                                                              <div class="relative" style="padding-top: 81.81818181818181%">
-              <iframe class="absolute inset-0 w-full h-full"
-src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe>
-</div>
-
+                                                              
                             </div>
 
             
@@ -2053,5 +2053,27 @@ Get Started
         Drupal.behaviors[key].attach(document);
       });
     </script>
+    <div class="z-30 fixed h-screen w-full flex flex-col items-center justify-center bg-green-200 hidden"
+:class="{'hidden': !$store.modal.visible}"
+>
+  
+
+
+
+
+  <div  class="max-w-7xl mx-auto w-full px-6">
+          <div class="relative w-full" style="padding-top: 56.25%">
+        <iframe name="youtube embed" allow="autoplay; encrypted-media" class="absolute inset-0 w-full h-full" x-bind:src="$store.modal.url" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+  <div class="absolute top-8 right-8 cursor-pointer" @click="$store.modal.visible = false">
+    
+  
+
+<svg  class="fill-current svg w-6 h-6">
+    <use xlink:href="/images/spritemap.svg#close"></use>
+</svg>
+  </div>
+</div>
   </body>
 </html>

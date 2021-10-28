@@ -112,7 +112,7 @@
     <link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json">
 
   </head>
-  <body x-data="{ isScrollDown: false, menuIsOpen: false }">
+  <body x-data="{ menuIsOpen: false, modal: { visible: false, url:''} }">
     <div class="wingsuit-page-wrapper">
 
 
@@ -442,5 +442,27 @@ module<span class="token punctuation">.</span><span class="token property-access
         Drupal.behaviors[key].attach(document);
       });
     </script>
+    <div class="z-30 fixed h-screen w-full flex flex-col items-center justify-center bg-green-200 hidden"
+:class="{'hidden': !$store.modal.visible}"
+>
+  
+
+
+
+
+  <div  class="max-w-7xl mx-auto w-full px-6">
+          <div class="relative w-full" style="padding-top: 56.25%">
+        <iframe name="youtube embed" allow="autoplay; encrypted-media" class="absolute inset-0 w-full h-full" x-bind:src="$store.modal.url" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+  <div class="absolute top-8 right-8 cursor-pointer" @click="$store.modal.visible = false">
+    
+  
+
+<svg  class="fill-current svg w-6 h-6">
+    <use xlink:href="/images/spritemap.svg#close"></use>
+</svg>
+  </div>
+</div>
   </body>
 </html>
