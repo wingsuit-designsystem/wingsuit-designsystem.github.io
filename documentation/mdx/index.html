@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -391,22 +396,22 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PatternDoc</span></span> <span class="token attr-name">pattern</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>pattern<span class="token punctuation">}</span></span> <span class="token attr-name">showInclude</span> <span class="token punctuation">/&gt;</span></span>
 </code></pre></div><h2>Token documentation components</h2><h3>Typeset</h3><p>To show your Typeset system use <code>&lt;Typeset ..&gt;</code>.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> fontSizes <span class="token operator">=</span> <span class="token punctuation">{</span>
-  small<span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
-  base<span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
-  large<span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">small</span><span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">base</span><span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">large</span><span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Typeset</span></span> <span class="token attr-name">fontFamily</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fontfamily<span class="token punctuation">}</span></span> <span class="token attr-name">classNamePrefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.text-<span class="token punctuation">&quot;</span></span> <span class="token attr-name">fontSizes</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fontSizes<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre></div><h3>Spacing</h3><p>To show your spacing system use <code>&lt;Spacing ..&gt;</code>.</p><div class="remark-highlight"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> spacing <span class="token operator">=</span> <span class="token punctuation">{</span>
-  small<span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
-  base<span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
-  large<span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">small</span><span class="token operator">:</span> <span class="token string">&#x27;0.5rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">base</span><span class="token operator">:</span> <span class="token string">&#x27;1rem&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">large</span><span class="token operator">:</span> <span class="token string">&#x27;2rem&#x27;</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Spacing</span></span> <span class="token attr-name">spacing</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>spacing<span class="token punctuation">}</span></span> <span class="token attr-name">classNamePrefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.w-<span class="token punctuation">&quot;</span></span> <span class="token attr-name">direction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>vertical|horizontal<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Spacing</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre></div>
   </div>
 
-
+  
   
         
       </div>

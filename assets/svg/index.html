@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -360,23 +365,23 @@
  class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
       <h1>SVGs</h1><h2>SVG images</h2><p>If you need SVG files as images instead of icons, put your images in an <code>images</code> folder.
-To render the SVG icon, use the ws-assets stream wrapper:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ file_create_url(<span class="token punctuation">&#x27;</span>ws-assets://images/icon.svg<span class="token punctuation">&#x27;</span>)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></span>
-</code></pre></div><h2>SVG Icons</h2><p>Wingsuit generates an SVG sprite map for every SVG located in an <code>icons</code> folder.</p><p>To render the icons include the <code>svg atom</code> in your Twig template:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other">{% include &quot;@atoms/svg/svg.twig&quot; with {&quot;variant&quot;: &#x27;icon&#x27;, icon: &quot;icon&quot; }</span>
+To render the SVG icon, use the ws-assets stream wrapper:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ file_create_url(<span class="token punctuation">&#x27;</span>ws-assets://images/icon.svg<span class="token punctuation">&#x27;</span>)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2>SVG Icons</h2><p>Wingsuit generates an SVG sprite map for every SVG located in an <code>icons</code> folder.</p><p>To render the icons include the <code>svg atom</code> in your Twig template:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig">{% include &quot;@atoms/svg/svg.twig&quot; with {&quot;variant&quot;: &#x27;icon&#x27;, icon: &quot;icon&quot; }
 </code></pre></div><h2>Multiple SVG spritemaps.</h2><p>If you need more than one spritemap you can put your icons in a separate folder and extend the preset configuration in <code>wingsuit.yml</code>.
 For example, if you need a spritemap for your language icons, put all the icons in a folder called <code>icons-languages</code>.
 Then you need to configure the <a href="https://github.com/wingsuit-designsystem/wingsuit/blob/master/packages/core/src/server/presets/svg.ts">svg preset</a> with multiple svg folders.</p><p>Here&#x27;s the configuration for our <code>icons-languages</code> example:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-    parameters<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token string">&#x27;svg&#x27;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        sources<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token literal-property property">parameters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&#x27;svg&#x27;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">sources</span><span class="token operator">:</span> <span class="token punctuation">[</span>
               <span class="token punctuation">{</span>
-                sourceFolder<span class="token operator">:</span> <span class="token string">&#x27;icons&#x27;</span><span class="token punctuation">,</span>
-                jsonFile<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-                spriteFilename<span class="token operator">:</span> <span class="token string">&#x27;images/spritemap.svg&#x27;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">sourceFolder</span><span class="token operator">:</span> <span class="token string">&#x27;icons&#x27;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">jsonFile</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">spriteFilename</span><span class="token operator">:</span> <span class="token string">&#x27;images/spritemap.svg&#x27;</span><span class="token punctuation">,</span>
               <span class="token punctuation">}</span><span class="token punctuation">,</span>
               <span class="token punctuation">{</span>
-                sourceFolder<span class="token operator">:</span> <span class="token string">&#x27;icons-languages&#x27;</span><span class="token punctuation">,</span>
-                jsonFile<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs-languages.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-                spriteFilename<span class="token operator">:</span> <span class="token string">&#x27;images/spritemap-languages.svg&#x27;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">sourceFolder</span><span class="token operator">:</span> <span class="token string">&#x27;icons-languages&#x27;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">jsonFile</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span>appConfig<span class="token punctuation">.</span><span class="token property-access">absAppPath</span><span class="token punctuation">,</span> <span class="token string">&#x27;/config/silo/svgs-languages.json&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">spriteFilename</span><span class="token operator">:</span> <span class="token string">&#x27;images/spritemap-languages.svg&#x27;</span><span class="token punctuation">,</span>
               <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span>
@@ -387,7 +392,38 @@ Then you need to configure the <a href="https://github.com/wingsuit-designsystem
 </code></pre></div><p>After that you need to adjust the <code>icons.mdx</code> file to read the new svg-languages.json.</p>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Images & Icons</b><br>Learn how to use images and icons in your patterns.</div>
+  <div>
+    
 
+
+    
+<a  href="/assets/images" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Javascript</b><br>Learn how to use javascript in your patterns.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/javascript" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

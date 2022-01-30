@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -364,11 +369,11 @@
 </code></pre></div><p>After that, you&#x27;ll need wingsuit to consume the preset by loading it via your wingsuit.config.js:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> namespaces <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./source/default/namespaces&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  presets<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token literal-property property">presets</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&#x27;@wingsuit-designsystem/preset-pages&#x27;</span><span class="token punctuation">,</span>
     <span class="token string">&#x27;@wingsuit-designsystem/preset-mdx&#x27;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  designSystems<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">designSystems</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       namespaces<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -380,21 +385,21 @@ Wingsuit will generate an app folder with a pages subfolder.</p><h2>Page configu
 You can choose either TWIG templates with MDX for docs pages. Or you can Wingsuit Components for landing pages.</p><h3>Landing pages:</h3><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token string">&#x27;protons&#x27;</span><span class="token punctuation">;</span>
 
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token punctuation">{</span>
-  path<span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
-  pattern<span class="token operator">:</span> <span class="token punctuation">{</span>
-    label<span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">pattern</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
     <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;page&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-      menu<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">menu</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      content<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token punctuation">[</span>
-          <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&#x27;hero&#x27;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&#x27;hero&#x27;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
           <span class="token punctuation">{</span>
-            id<span class="token operator">:</span> <span class="token string">&#x27;second_component&#x27;</span><span class="token punctuation">,</span>
-            fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-              field_a<span class="token operator">:</span> <span class="token string">&#x27;Value 1&#x27;</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&#x27;second_component&#x27;</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">field_a</span><span class="token operator">:</span> <span class="token string">&#x27;Value 1&#x27;</span>
               <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -407,27 +412,27 @@ You can choose either TWIG templates with MDX for docs pages. Or you can Wingsui
 </code></pre></div><h4>Composing patterns:</h4><p>Composition allows you to embed patterns into patterns.</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token string">&#x27;protons&#x27;</span><span class="token punctuation">;</span>
 
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token punctuation">{</span>
-  path<span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
-  pattern<span class="token operator">:</span> <span class="token punctuation">{</span>
-    label<span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">pattern</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
     <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;page&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-      menu<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">menu</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      content<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token punctuation">[</span>
           <span class="token punctuation">{</span>
-            id<span class="token operator">:</span> <span class="token string">&#x27;root_component&#x27;</span><span class="token punctuation">,</span>
-            fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-              button<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&#x27;root_component&#x27;</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">button</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                 <span class="token punctuation">{</span>
-                  id<span class="token operator">:</span> <span class="token string">&#x27;button&#x27;</span><span class="token punctuation">,</span>
-                  fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-                    text<span class="token operator">:</span> <span class="token string">&#x27;Read More&#x27;</span>
+                  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&#x27;button&#x27;</span><span class="token punctuation">,</span>
+                  <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">&#x27;Read More&#x27;</span>
                   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                  settings<span class="token operator">:</span> <span class="token punctuation">{</span>
-                    url<span class="token operator">:</span> <span class="token string">&#x27;https://www.readmore.de&#x27;</span>
+                  <span class="token literal-property property">settings</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&#x27;https://www.readmore.de&#x27;</span>
                   <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
               <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -442,19 +447,19 @@ You can choose either TWIG templates with MDX for docs pages. Or you can Wingsui
 
 <span class="token keyword">const</span> section_1 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./section_1.yml&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token punctuation">{</span>
-  path<span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
-  pattern<span class="token operator">:</span> <span class="token punctuation">{</span>
-    label<span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">pattern</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">&#x27;Homepage&#x27;</span><span class="token punctuation">,</span>
     <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;page&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    fields<span class="token operator">:</span> <span class="token punctuation">{</span>
-      menu<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">menu</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      content<span class="token operator">:</span> <span class="token punctuation">{</span>
-        preview<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">preview</span><span class="token operator">:</span> <span class="token punctuation">[</span>
           <span class="token punctuation">{</span>
-            id<span class="token operator">:</span> <span class="token string">&#x27;section_pattern&#x27;</span><span class="token punctuation">,</span>
-            fields<span class="token operator">:</span> section_1<span class="token punctuation">,</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&#x27;section_pattern&#x27;</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">fields</span><span class="token operator">:</span> section_1<span class="token punctuation">,</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -467,7 +472,7 @@ You can choose either TWIG templates with MDX for docs pages. Or you can Wingsui
 <span class="token keyword">const</span> template <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./index.twig&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token punctuation">{</span>
-  path<span class="token operator">:</span> <span class="token string">&#x27;/path&#x27;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&#x27;/path&#x27;</span><span class="token punctuation">,</span>
   template<span class="token punctuation">,</span>
   <span class="token constant">MDX</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -476,7 +481,38 @@ You can choose either TWIG templates with MDX for docs pages. Or you can Wingsui
 </code></pre></div>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>UI Patterns</b><br>Learn how wingsuit leverages UI patterns.</div>
+  <div>
+    
 
+
+    
+<a  href="/components/wingsuit" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Components</b><br>Learn about creating and editing components.</div>
+  <div>
+    
+
+
+    
+<a  href="/components/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

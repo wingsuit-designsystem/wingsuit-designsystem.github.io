@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -362,14 +367,14 @@
       <h1>Thinking in Components!</h1><h2>Component-Based Theming in Drupal&#x27;</h2><p>When it comes to Drupal themes the easy and fast way is to just theme your nodes or taxonomies as we see it.
 It is very likely that you need to theme the same component more than once.</p><p>What if we thought about building components so that they are configurable and reusable across different entities, views or blocks.
 Each component is the single point of view inside your theme. This is especially important for utility first frameworks like TailwindCSS.</p><p>If we could do that then we would be able to deliver your theme at a much faster. It is much faster to add new content types.</p><p>Drupal supports two possibilities for component based theming. Both ways are working with Wingsuit.</p><h3>1. Presenter template</h3><p>The presenter template is a Drupal theme template which <code>includes</code> the component template and provides all need variables.
-If you need to theme your link field with the button component you create a field template <code>field--field-link.html.twig</code> and include the button component like this:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span>
-  <span class="token keyword">include</span></span> <span class="token string"><span class="token punctuation">&quot;</span>@atoms/button/button.twig<span class="token punctuation">&quot;</span></span> <span class="token property">with</span> <span class="token punctuation">{</span><span class="token string"><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#title<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string"><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span><span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#url<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
-<span class="token rd"><span class="token punctuation">%}</span></span></span>
+If you need to theme your link field with the button component you create a field template <code>field--field-link.html.twig</code> and include the button component like this:</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token twig language-twig"><span class="token delimiter punctuation">{%</span>
+  <span class="token tag-name keyword">include</span> <span class="token string"><span class="token punctuation">&quot;</span>@atoms/button/button.twig<span class="token punctuation">&quot;</span></span> with <span class="token punctuation">{</span><span class="token string"><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> item<span class="token punctuation">.</span>content<span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#title<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string"><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span><span class="token punctuation">:</span> item<span class="token punctuation">.</span>content<span class="token punctuation">[</span><span class="token string"><span class="token punctuation">&#x27;</span>#url<span class="token punctuation">&#x27;</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span>toString<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token delimiter punctuation">%}</span></span>
 </code></pre></div><h3>2. UI Patterns Ecosystem</h3><p>With UI Patterns you can map your entity fields to a component without additional mapping code.
 The UI Patterns ecosystem offering additional modules to map nearly any corner of Drupal to a component.</p><div class="relative" style="padding-top:81.81818181818181%"><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Fe5DHtqhEF0"></iframe></div>
   </div>
 
-
+  
   
         
       </div>

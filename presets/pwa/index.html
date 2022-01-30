@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -364,10 +369,10 @@ and other PWA niceties.</p><h2>Installing the pwa preset</h2><p>To use this pres
 </code></pre></div><p>After that, you&#x27;ll need wingsuit to consume the preset by loading it via your wingsuit.config.js:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> namespaces <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./source/default/namespaces&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  presets<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token literal-property property">presets</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&#x27;@wingsuit-designsystem/preset-pwa&#x27;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  designSystems<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">designSystems</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       namespaces<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -378,26 +383,26 @@ It will look for a <code>favicon.png</code> in your <code>source</code> folder. 
 You&#x27;ll also want to define your project specific pwa values there, because their default value are set to <code>null</code>. Following props are exposed:</p><table><thead><tr><th>Prop</th><th>Type</th><th>Desc</th></tr></thead><tbody><tr><td>logo</td><td>{string | default: &#x27;./source/favicon.png&#x27;}</td><td>Path to your source logo. Logo can be either png or svg</td></tr><tr><td>prefix</td><td>{string | default: &#x27;favicons/&#x27;}</td><td>Prefix which gets injected into your webapp.html</td></tr><tr><td>publicPath</td><td>{string | default: &#x27;favicons/&#x27;}</td><td>Destination of your favicons (will mostly be the same as your <code>prefix</code>)</td></tr><tr><td>appName</td><td>{string | default: &#x27;null&#x27;}</td><td>Your application&#x27;s name</td></tr><tr><td>appDescription</td><td>{string | default: &#x27;null&#x27;}</td><td>Your application&#x27;s description</td></tr><tr><td>developerName</td><td>{string | default: &#x27;null&#x27;}</td><td>Your (or your developer&#x27;s) name</td></tr><tr><td>developerURL</td><td>{string | default: &#x27;null&#x27;}</td><td>Your (or your developer&#x27;s) URL</td></tr></tbody></table><p>Example configuration:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> namespaces <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./source/default/namespaces&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;@wingsuit-designsystem/preset-pwa&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  parameters<span class="token operator">:</span> <span class="token punctuation">{</span>
-    pwa<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">presets</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;@wingsuit-designsystem/preset-pwa&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">parameters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">pwa</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token comment">// path to source (default: &#x27;./source/favicon.png&#x27;)</span>
-      logo<span class="token operator">:</span> <span class="token string">&#x27;./source/favicon.png&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">logo</span><span class="token operator">:</span> <span class="token string">&#x27;./source/favicon.png&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// injected prefix (default: &#x27;/favicons/&#x27;)</span>
-      prefix<span class="token operator">:</span> <span class="token string">&#x27;/favicons&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">prefix</span><span class="token operator">:</span> <span class="token string">&#x27;/favicons&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// destination (default: &#x27;/favicons/&#x27;)</span>
-      publicPath<span class="token operator">:</span> <span class="token string">&#x27;/favicons&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">publicPath</span><span class="token operator">:</span> <span class="token string">&#x27;/favicons&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// App Name (default: &#x27;null&#x27;)</span>
-      appName<span class="token operator">:</span> <span class="token string">&#x27;My awesome app&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">appName</span><span class="token operator">:</span> <span class="token string">&#x27;My awesome app&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// App Description (default: &#x27;null&#x27;)</span>
-      appDescription<span class="token operator">:</span> <span class="token string">&#x27;App developed with the awesome wingsuit package&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">appDescription</span><span class="token operator">:</span> <span class="token string">&#x27;App developed with the awesome wingsuit package&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// Developer Name (default: &#x27;null&#x27;)</span>
-      developerName<span class="token operator">:</span> <span class="token string">&#x27;Steve Jobs&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">developerName</span><span class="token operator">:</span> <span class="token string">&#x27;Steve Jobs&#x27;</span><span class="token punctuation">,</span>
       <span class="token comment">// Developer URL (default: &#x27;null&#x27;)</span>
-      developerURL<span class="token operator">:</span> <span class="token string">&#x27;https://wingsuit-designsystem.github.io/&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">developerURL</span><span class="token operator">:</span> <span class="token string">&#x27;https://wingsuit-designsystem.github.io/&#x27;</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  designSystems<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">designSystems</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       namespaces<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -406,7 +411,38 @@ module<span class="token punctuation">.</span><span class="token property-access
 </code></pre></div><h2>Integration into your CMS</h2><p>To integrate your favicon into your CMS copy the content of <code>app-TYPE/webapp.html</code> into your html TWIG template.</p>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>UI Patterns</b><br>Learn how wingsuit leverages UI patterns.</div>
+  <div>
+    
 
+
+    
+<a  href="/components/wingsuit" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Components</b><br>Learn about creating and editing components.</div>
+  <div>
+    
+
+
+    
+<a  href="/components/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

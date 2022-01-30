@@ -2,8 +2,8 @@
   <meta>
     <link rel="preload" href="/font/Inter.var.woff2" as="font" type="font/woff2" crossorigin>
 
-    <title>Create new component | Wingsuit</title>
-    <meta type="description" content="The wizard will guide you through all possible pattern types, including documentation."/>
+    <title>Twing extensions | Wingsuit</title>
+    <meta type="description" content="Add twing extensions."/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170378669-1"></script>
     <script>
@@ -205,7 +205,7 @@
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/quick-start-guide">Quickstart guide</a>
               </li>
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline  bg-teal-300 " href="/guides/create-component-guide">Create new component</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-component-guide">Create new component</a>
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
@@ -214,7 +214,7 @@
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
               </li>
                           <li class="mb-2">
-                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline  bg-teal-300 " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -364,20 +364,38 @@
                             <div
  class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
-      <h1>Create new component</h1><p>To create a new component run:</p><div class="remark-highlight"><pre class="language-sh"><code class="language-sh">yarn ws generate-component</code></pre></div><p>The wizard will guide you through all possible pattern types, including documentation.</p>
+      <h1>Twing extensions</h1><p>You can add your own twing extensions to wingsuit.</p><p>Here a sample to add a new function <code>apps/storybook/preview.js</code>:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> renderImpl <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TwingRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> twingEnvironment <span class="token operator">=</span> renderImpl<span class="token punctuation">.</span><span class="token method function property-access">getEnvironment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token keyword">function</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TwingFunction</span><span class="token punctuation">(</span><span class="token string">&#x27;function_name&#x27;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+twingEnvironment<span class="token punctuation">.</span><span class="token method function property-access">addFunction</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">configure</span><span class="token punctuation">(</span>
+  module<span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>
+    require<span class="token punctuation">.</span><span class="token method function property-access">context</span><span class="token punctuation">(</span><span class="token string">&#x27;./patterns&#x27;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex"><span class="token special-escape escape">\.</span>stories<span class="token group punctuation">(</span><span class="token special-escape escape">\.</span>jsx<span class="token alternation keyword">|</span><span class="token special-escape escape">\.</span>js<span class="token alternation keyword">|</span><span class="token special-escape escape">\.</span>mdx<span class="token group punctuation">)</span><span class="token anchor function">$</span></span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    require<span class="token punctuation">.</span><span class="token method function property-access">context</span><span class="token punctuation">(</span><span class="token string">&#x27;wspatterns&#x27;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex"><span class="token special-escape escape">\.</span>stories<span class="token group punctuation">(</span><span class="token special-escape escape">\.</span>jsx<span class="token alternation keyword">|</span><span class="token special-escape escape">\.</span>js<span class="token alternation keyword">|</span><span class="token special-escape escape">\.</span>mdx<span class="token group punctuation">)</span><span class="token anchor function">$</span></span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  require<span class="token punctuation">.</span><span class="token method function property-access">context</span><span class="token punctuation">(</span><span class="token string">&#x27;./config&#x27;</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex"><span class="token special-escape escape">\.</span>json<span class="token alternation keyword">|</span><span class="token special-escape escape">\.</span>ya<span class="token quantifier number">?</span>ml<span class="token anchor function">$</span></span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  require<span class="token punctuation">.</span><span class="token method function property-access">context</span><span class="token punctuation">(</span><span class="token string">&#x27;wspatterns&#x27;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex"><span class="token special-escape escape">\.</span>twig<span class="token anchor function">$</span></span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  namespaces<span class="token punctuation">,</span>
+  renderImpl
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><a href="https://nightlycommit.github.io/twing/advanced.html#context-aware-filters">Click here for more infos about twing extensions</a>.</p>
   </div>
 
       <div class="pt-6 md:pt-14">
       <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
               <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
-  <div class="flex-grow pr-4"><b>Not sure which component type you need?</b><br>Check the docs!</div>
+  <div class="flex-grow pr-4"><b>Configure your app?</b><br>Check the parameters under the "App details" section and extend your wingsuit.config.js</div>
   <div>
     
 
 
     
-<a  href="/components/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
-Component types
+<a  href="/configurations/details" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+Details
   </a>
 
   </div>

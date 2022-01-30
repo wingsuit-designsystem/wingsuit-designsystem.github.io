@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -426,13 +431,13 @@ The value can be a string or a subobject.</p><ul><li>The string is passed to Fak
           <span class="token key atrule">style</span><span class="token punctuation">:</span> medium
         <span class="token key atrule">fields</span><span class="token punctuation">:</span>
           <span class="token key atrule">field</span><span class="token punctuation">:</span> value
-</code></pre></div><p>You can control how Wingsuit will handle the resulting array of objects.</p><h4>Following options are available:</h4><ul><li><code>single_value</code>: All patterns will be rendered into a single value. The resulting variable is a string not a array. This useful if you want to add multiple objects into one area.<br/>Your pattern.twig looks like:</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
-</code></pre></div><ul><li><code>items</code> provides a list of patterns. The resulting variable is an array you can loop through.<h4>Your pattern.twig looks like:</h4></li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">for</span></span> <span class="token property">item</span> <span class="token operator">in</span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
-<span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">item</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
-<span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">endfor</span></span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
-</code></pre></div><ul><li><code>field_items</code> provides a list of objects. The rendered pattern is inside the content key. This is useful to emulate multi value field templates in drupal.</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">for</span></span> <span class="token property">item</span> <span class="token operator">in</span> <span class="token property">images</span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
-<span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">item</span><span class="token punctuation">.</span><span class="token property">content</span> <span class="token rd"><span class="token punctuation">}}</span></span></span>
-<span class="token tag"><span class="token ld"><span class="token punctuation">{%</span> <span class="token keyword">endfor</span></span> <span class="token rd"><span class="token punctuation">%}</span></span></span>
+</code></pre></div><p>You can control how Wingsuit will handle the resulting array of objects.</p><h4>Following options are available:</h4><ul><li><code>single_value</code>: All patterns will be rendered into a single value. The resulting variable is a string not a array. This useful if you want to add multiple objects into one area.<br/>Your pattern.twig looks like:</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token twig language-twig"><span class="token delimiter punctuation">{{</span> images <span class="token delimiter punctuation">}}</span></span>
+</code></pre></div><ul><li><code>items</code> provides a list of patterns. The resulting variable is an array you can loop through.<h4>Your pattern.twig looks like:</h4></li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token twig language-twig"><span class="token delimiter punctuation">{%</span> <span class="token tag-name keyword">for</span> item <span class="token operator">in</span> images <span class="token delimiter punctuation">%}</span></span>
+<span class="token twig language-twig"><span class="token delimiter punctuation">{{</span> item <span class="token delimiter punctuation">}}</span></span>
+<span class="token twig language-twig"><span class="token delimiter punctuation">{%</span> <span class="token tag-name keyword">endfor</span> <span class="token delimiter punctuation">%}</span></span>
+</code></pre></div><ul><li><code>field_items</code> provides a list of objects. The rendered pattern is inside the content key. This is useful to emulate multi value field templates in drupal.</li></ul><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token twig language-twig"><span class="token delimiter punctuation">{%</span> <span class="token tag-name keyword">for</span> item <span class="token operator">in</span> images <span class="token delimiter punctuation">%}</span></span>
+<span class="token twig language-twig"><span class="token delimiter punctuation">{{</span> item<span class="token punctuation">.</span>content <span class="token delimiter punctuation">}}</span></span>
+<span class="token twig language-twig"><span class="token delimiter punctuation">{%</span> <span class="token tag-name keyword">endfor</span> <span class="token delimiter punctuation">%}</span></span>
 </code></pre></div><h3>Composing patterns (Since V1.1):</h3><p>Composition allows you to embed patterns into patterns.</p><div class="remark-highlight"><pre class="language-YAML"><code class="language-YAML">fields:
   container:
     label: Container
@@ -462,7 +467,38 @@ The value can be a string or a subobject.</p><ul><li>The string is passed to Fak
 </code></pre></div>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Presentation templates</b><br>Learn how to create storybook preview pages for your components.</div>
+  <div>
+    
 
+
+    
+<a  href="/components/presentation" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Assets</b><br>Learn how to manage your css, js and other asses with wingsuit.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

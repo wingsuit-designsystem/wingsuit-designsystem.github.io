@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -363,10 +368,10 @@
 </code></pre></div><p>After that, you&#x27;ll need wingsuit to consume the preset by loading it via your wingsuit.config.js:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> namespaces <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./source/default/namespaces&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  presets<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token literal-property property">presets</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&#x27;@wingsuit-designsystem/preset-imagemin&#x27;</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  designSystems<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">designSystems</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       namespaces<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -377,14 +382,14 @@ When automatic webp creation is set to true, webp variants will also be created 
 All further optimizations only run during  production builds alongside a specific .cache directory, which will be created at the root level of your application ensuring less performance loss.</p><p>To deactivate the automatic webp creation, merely use the following exposed property within the parameters object of your <code>wingsuit.config.js</code>:</p><table><thead><tr><th>Prop</th><th>Type</th><th>Desc</th></tr></thead><tbody><tr><td>webpEnabled</td><td>{Boolean | default: true}</td><td>Generate webP variants of images</td></tr></tbody></table><p>Example configuration:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> namespaces <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./source/default/namespaces&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;@wingsuit-designsystem/preset-imagemin&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  parameters<span class="token operator">:</span> <span class="token punctuation">{</span>
-    imagemin<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">presets</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;@wingsuit-designsystem/preset-imagemin&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">parameters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">imagemin</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token comment">// automatic webp creation (default: true)</span>
-      webpEnabled<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">webpEnabled</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  designSystems<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">designSystems</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       namespaces<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -393,7 +398,38 @@ module<span class="token punctuation">.</span><span class="token property-access
 </code></pre></div>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>PWA Preset</b><br>Let wingsuit generate all your favicons and a manifest.json for pwa enhancements for you.</div>
+  <div>
+    
 
+
+    
+<a  href="/presets/pwa" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Components</b><br>Learn about creating and editing components.</div>
+  <div>
+    
+
+
+    
+<a  href="/components/overview" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

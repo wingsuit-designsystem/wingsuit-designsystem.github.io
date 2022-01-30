@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -359,8 +364,8 @@
                             <div
  class="dark:prose-dark prose max-w-none lg:prose-lg"
 >
-      <h1>Images &amp; Icons</h1><p>The <code>apps/[app]/assets.js</code> includes all images. Wingsuit will compile these files to <code>[dist]/assets/images</code>.</p><h3>Embedding images in Drupal Twig</h3><p>You can use the <code>ws-assets</code> stream wrapper to get a path to the asset folder. Ensure you have the <a href="https://www.drupal.org/project/wingsuit_companion">wingsuit_companion</a> module enabled.</p><b>Sample Twig file with an image:</b><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other">&lt;img src=&quot;</span><span class="token tag"><span class="token ld"><span class="token punctuation">{{</span></span> <span class="token property">file_create_url</span><span class="token punctuation">(</span><span class="token string"><span class="token punctuation">&#x27;</span>ws-assets://images/dummy.png<span class="token punctuation">&#x27;</span></span><span class="token punctuation">)</span> <span class="token rd"><span class="token punctuation">}}</span></span></span><span class="token other">&quot;/&gt;</span>
-</code></pre></div><p>or use the image component</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token other">{% include &quot;@atoms/image/image.wig&quot; with {path: &quot;images/dummy.png&quot; }</span>
+      <h1>Images &amp; Icons</h1><p>The <code>apps/[app]/assets.js</code> includes all images. Wingsuit will compile these files to <code>[dist]/assets/images</code>.</p><h3>Embedding images in Drupal Twig</h3><p>You can use the <code>ws-assets</code> stream wrapper to get a path to the asset folder. Ensure you have the <a href="https://www.drupal.org/project/wingsuit_companion">wingsuit_companion</a> module enabled.</p><b>Sample Twig file with an image:</b><div class="remark-highlight"><pre class="language-twig"><code class="language-twig"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token twig language-twig"><span class="token delimiter punctuation">{{</span> file_create_url<span class="token punctuation">(</span><span class="token string"><span class="token punctuation">&#x27;</span>ws-assets://images/dummy.png<span class="token punctuation">&#x27;</span></span><span class="token punctuation">)</span> <span class="token delimiter punctuation">}}</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>or use the image component</p><div class="remark-highlight"><pre class="language-twig"><code class="language-twig">{% include &quot;@atoms/image/image.wig&quot; with {path: &quot;images/dummy.png&quot; }
 </code></pre></div><h3>Image in CSS</h3><p>To use images inside your CSS file, use the relative path to the image. Webpack will replace it with the correct output path.</p><h3>Placeholder images</h3><p>Wingsuit supports image styles and responsive image styles for placeholder images in storybook.</p><p>You can configure your image styles in your <code>placeholder.wingsuit.yml</code></p><p>Sample <code>placeholder.wingsuit.yml</code></p><div class="remark-highlight"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">imageConfig</span><span class="token punctuation">:</span>
   <span class="token key atrule">styles</span><span class="token punctuation">:</span>
     <span class="token key atrule">1x1_xxs</span><span class="token punctuation">:</span>
@@ -395,7 +400,38 @@ This is done by a twig macro. You can find everything inside the placeholder com
 Image style works for simple image styles and responsive image styles.</p>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>SVG</b><br>Learn how to use svg assets in your patterns.</div>
+  <div>
+    
 
+
+    
+<a  href="/assets/svg" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Javascript</b><br>Learn how to use javascript in your patterns.</div>
+  <div>
+    
+
+
+    
+<a  href="/assets/javascript" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>

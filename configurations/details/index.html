@@ -116,7 +116,6 @@
     <div class="wingsuit-page-wrapper">
 
 
-
   
 
 <header class="fixed h-18 w-full p-4 md:p-0 header-offset bg-teal-200 w-full z-30 top-0 text-white">
@@ -127,7 +126,7 @@
 <a class="pr-2 block" href="/">
   <img with="235" height="50" src="/images/logo.svg" alt="Brand Logo" class="w-full max-w-7xl">
 </a>
-        <span class="text-xs text-gray-300">v1.1</span>
+        <span class="text-xs text-gray-300">v1.2</span>
       </div>
     </div>
           <div class="block md:hidden" @click="menuIsOpen = !menuIsOpen">
@@ -156,8 +155,8 @@
       </a>
     </li>
       <li class="py-2 lg:py-0 lg:ml-3">
-      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedotone">
-        <b>What's new in Version 1.1</b>
+      <a class="ml-5 text-black hover:text-gray-600 " href="/releases/onedottwo">
+        <b>What's new in Version 1.2</b>
       </a>
     </li>
   </ul>
@@ -210,6 +209,12 @@
               </li>
                           <li class="mb-2">
                 <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/create-app-guide">Create new app</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/showroom">Showroom</a>
+              </li>
+                          <li class="mb-2">
+                <a class="p-2 inline-block text-gray-600 hover:text-gray-900 hover:underline " href="/guides/twing-extensions-guide">Twing extensions</a>
               </li>
                       </ul>
               </li>
@@ -365,29 +370,60 @@ Each design system has the following configurable properties:</p><ul><li><code>p
 <span class="token keyword">const</span> patterns <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&#x27;patterns&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  tokens<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&#x27;tokens&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  protons<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;00-protons&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  atoms<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;01-atoms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  molecules<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;02-molecules&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  organisms<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;03-organisms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  templates<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;04-templates&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  pages<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;05-pages&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">tokens</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&#x27;tokens&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">protons</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;00-protons&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">atoms</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;01-atoms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">molecules</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;02-molecules&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">organisms</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;03-organisms&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templates</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;04-templates&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">pages</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>patterns<span class="token punctuation">,</span> <span class="token string">&#x27;05-pages&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre></div><p>You can use namespaces in twig and javascript imports.</p><b>TWIG:</b><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token punctuation">{</span><span class="token punctuation">{</span> include <span class="token string">&quot;@atoms/button/button.twig&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre></div><b>Javascript:</b><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token string">&quot;atoms/button&quot;</span><span class="token punctuation">;</span>
-</code></pre></div><h3>Environment specific configuration</h3><p>With <code>environments</code> you can overwrite a configuration value for a specific environment.</p><p>Here is an example of overwriting the cssMode for development:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js">environments<span class="token operator">:</span> <span class="token punctuation">{</span>
+</code></pre></div><h3>Environment specific configuration</h3><p>With <code>environments</code> you can overwrite a configuration value for a specific environment.</p><p>Here is an example of overwriting the cssMode for development:</p><div class="remark-highlight"><pre class="language-js"><code class="language-js"><span class="token literal-property property">environments</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token spread operator">...</span>
-      development<span class="token operator">:</span> <span class="token punctuation">{</span>
-        apps<span class="token operator">:</span> <span class="token punctuation">{</span>
-          storybook<span class="token operator">:</span> <span class="token punctuation">{</span>
-            cssMode<span class="token operator">:</span> <span class="token string">&quot;extract&quot;</span>
+      <span class="token literal-property property">development</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">apps</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">storybook</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">cssMode</span><span class="token operator">:</span> <span class="token string">&quot;extract&quot;</span>
           <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span>
 </code></pre></div><h2>Presets details</h2><p>Check the <a href="../preset-webpack">presets documentation</a> for more infos.</p>
   </div>
 
+      <div class="pt-6 md:pt-14">
+      <div class="p-2 my-2.5 uppercase font-bold">NEXT</div>
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Configure webpack</b><br>Learn how to add custom webpack configuration, or alter the existing one.</div>
+  <div>
+    
 
+
+    
+<a  href="/configurations/custom-webpack-config" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+              <div class="shadow bg-white flex py-3 px-6 w-full mb-8">
+  <div class="flex-grow pr-4"><b>Presets</b><br>Learn about presets and how to use them.</div>
+  <div>
+    
+
+
+    
+<a  href="/configurations/preset-webpack" class="border-2 rounded-xl border-teal-500 bg-teal-500 px-6 font-bold text-black hover:shadow-button cursor-pointer items-center justify-center inline-flex border-2 focus:outline-none transition-colors duration-500 flex-row py-2 px-2 text-base">
+continue
+  </a>
+
+  </div>
+</div>
+
+          </div>
+  
   
         
       </div>
